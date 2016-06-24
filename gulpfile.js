@@ -1,7 +1,6 @@
 var gulp = require('gulp')
 var sass = require('gulp-ruby-sass')
 var connect = require('gulp-connect')
-var uglify = require('gulp-uglify')
 var uglifycss = require('gulp-uglifycss')
 
 
@@ -25,17 +24,10 @@ gulp.task('sass-ar', function () {
 gulp.task('watch',function(){
 	gulp.watch('./src/sass/en/*.sass',['sass'])
  	gulp.watch('./src/sass/ar/*.sass',['sass-ar'])
-	gulp.watch('./src/js/**/*.js',['compress'])
 	gulp.watch('./public/**/*.html',['html'])
 })
 
-//uglify
- gulp.task('compress',function(){
-	 gulp.src('./src/js/**/*.js')
-     .pipe(uglify())
-     .pipe(gulp.dest('./public/js'))
-    .pipe(connect.reload())
- })
+
 
 
 //uglifycss
