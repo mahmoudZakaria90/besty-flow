@@ -34,7 +34,7 @@ $internal-color: white
 	box-sizing: border-box
 	
 
-:root
+\:root
 	font-size: 10px
 
 
@@ -81,11 +81,38 @@ h1,h2,h3,h4,h5,h6,p
 	font-weight: inherit
 	line-height: inherit
 
+@for $i from 1 through 6
+	h#{$i}
+		a
+			color: inherit
+			font-size: inherit
+
 .fa
 	margin: 0 1.5rem 0
 
 label
 	font-weight: $regular
+
+.form
+	&-group
+		margin-bottom: 3rem
+	&-control
+
+.nav
+	&-tabs
+		&>li
+			&.active>a
+			&>a
+
+.pagination
+	&>li
+		&.active>a
+		&>a
+
+.breadcrumb
+	&>li
+		&.active>a
+		&>a
 
 //later adds
 
