@@ -1,20 +1,20 @@
 var gulp = require('gulp')
 var sass = require('gulp-ruby-sass')
 var connect = require('gulp-connect')
-var uglifycss = require('gulp-uglifycss')
+
 
 
 
 //sass
 gulp.task('sass', function () {
-   sass('./src/sass/en/*.sass',{style:'compressed'})
+   sass('./src/sass/en/*.sass',{style:'expanded'})
     .on('error', sass.logError)
     .pipe(connect.reload())
     .pipe(gulp.dest('./public/css'));
 });
 
 gulp.task('sass-ar', function () {   
-   sass('./src/sass/ar/*.sass',{style:'compressed'})
+   sass('./src/sass/ar/*.sass',{style:'expanded'})
     .on('error', sass.logError)
     .pipe(connect.reload())
     .pipe(gulp.dest('./public/css'));
@@ -27,15 +27,6 @@ gulp.task('watch',function(){
 	gulp.watch('./public/**/*.html',['html'])
 })
 
-
-
-
-//uglifycss
-gulp.task('css', function () {
-  gulp.src('./public/css/**/*.css')
-    .pipe(uglifycss())
-    .pipe(gulp.dest('./public/css'));
-});
 
 //html
 gulp.task('html', function() {
@@ -53,4 +44,4 @@ gulp.task('server',function(){
 })
 
 //default
-gulp.task('default',['watch','server','css'])
+gulp.task('default',['watch','server'])
