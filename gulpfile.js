@@ -25,6 +25,7 @@ gulp.task('watch',function(){
 	gulp.watch('./src/sass/en/*.sass',['sass'])
  	gulp.watch('./src/sass/ar/*.sass',['sass-ar'])
 	gulp.watch('./public/**/*.html',['html'])
+	gulp.watch('./src/js/*.js',['js'])
 })
 
 
@@ -32,6 +33,13 @@ gulp.task('watch',function(){
 gulp.task('html', function() {
 	gulp.src('./public/**/*.html')
 		.pipe(connect.reload());
+
+})
+
+//js
+gulp.task('js', function() {
+	gulp.src('./src/js/*.js')
+	.pipe(gulp.dest('./public/js'));
 
 })
 

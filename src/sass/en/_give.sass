@@ -1,0 +1,124 @@
+//Regular give.css
+.give
+	//fonts
+	&-main-face
+		font-family: $main-face
+	&-second-face
+		font-family: $second-face
+	
+	// @for $i from 1 through 6
+	// 	&-heading#{$i}
+	// 		font-size: null
+
+	&-bold
+		font-weight: bold
+		&er
+			font-weight: bolder
+	&-italic
+		font-style: italic
+
+	&-underline
+		text-decoration: underline
+
+	&-uppercase
+		text-transform: uppercase
+
+	&-lowercase
+		text-transform: lowercase
+
+	&-capitalize
+		text-transform: capitalize
+
+	// alignments
+
+	&-align-left
+		text-align: left
+
+	&-align-right
+		text-align: right
+
+	&-align-center
+		text-align: center
+
+	// padding & margin
+
+	&-margin
+		margin: $reg
+		+marginSizes()
+		&-tb
+			margin: $reg 0
+			+marginSizes()
+
+		&-lr
+			margin: 0 $reg
+			+marginSizes()
+		&-bottom
+			margin-bottom: $reg
+			+marginSizes()
+
+	&-padding
+		padding: $reg
+		+paddingSizes()
+		&-tb
+			padding: $reg 0
+			+paddingSizes()
+
+		&-lr
+			padding: 0 $reg
+			+paddingSizes()
+
+	//float
+	
+	&-float
+		&-left
+			float: left
+		&-right
+			float: right
+
+	//color & background
+	&-color-main
+		color: $main-color
+
+	&-color-second
+		color: $second-color
+
+	&-color-third
+		color: $third-color
+
+	&-background-main
+		background: $main-color
+
+	&-background-second
+		background: $second-color
+
+	&-background-third
+		background: $third-color
+
+	//displays
+
+	&-block
+		display: block
+
+	&-inline
+		display: inline
+		&-block
+			display: inline-block
+
+	&-list
+		&-item
+			display: list-item
+
+	//FLEX
+	&-flex
+		+flexBox()
+		&>*
+			flex: 1 0 auto
+		&-column
+			+flexColumn()
+
+		&-wrap
+			+flexWrap()
+			
+		&-center
+			align-items: center
+			justify-content: center
