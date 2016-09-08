@@ -12,17 +12,13 @@
   background-repeat: no-repeat;
 }
 
-:root {
-  font-size: 10px;
-}
-
 html, body {
   height: 100%;
 }
 
 body {
   font-family: "optima", "Open Sans", sans-serif;
-  font-size: inherit;
+  font-size: 10px;
   line-height: 1.5;
   color: #1a1a1a;
   font-weight: 400;

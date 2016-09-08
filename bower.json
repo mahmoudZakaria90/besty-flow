@@ -1,0 +1,27 @@
+{
+  "name": "besty-flow",
+  "description": "Multiple classes = shape your styles",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mahmoud Zakaria"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "work",
+    "flow",
+    "fast",
+    "web",
+    "page"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

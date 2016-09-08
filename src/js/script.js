@@ -1,5 +1,5 @@
-//direction
-function direction(){
+//docDirection
+function docDirection(){
 	var doc = document.documentElement;
 	var docLang = doc.getAttribute('lang')
 	if (docLang == 'en'){
@@ -13,6 +13,8 @@ function direction(){
 
 //Calling all functions on load events
 window.addEventListener('load',function(){
-	direction();
-
+	docDirection();
 })
+
+
+//Calling all functions on other events
