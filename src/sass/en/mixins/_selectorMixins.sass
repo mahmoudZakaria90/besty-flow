@@ -1,0 +1,22 @@
+// called mixins per create selector, can be called any where in the document
+=gvFlexSelf($selector,$value)
+	#{$selector}
+		-webkit-align-self: $value
+		-moz-align-self: $value
+		-o-align-self: $value
+		-ms-align-self: $value
+		align-self: $value
+
+=gvSizeS($selector,$width,$height)
+	#{$selector}
+		width: $width
+		height: $height
+=gvBgSizeS($selector,$value)
+	#{$selector}
+		background-size: $value
+
+// Top agent mixin
+// Works perfect with non-prefixes properties
+=gv($selector,$property,$value)
+	#{$selector}
+		#{$property}: $value

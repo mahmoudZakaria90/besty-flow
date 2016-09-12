@@ -1,6 +1,6 @@
 /*Custom CSS*/
 /*============*/
-
+@import mixins
 
 //Typography vars
 $main-font: 1.6rem
@@ -25,6 +25,8 @@ $md: 2rem
 $sm: 1rem
 
 
+
+
 *
 	margin: 0
 	padding: 0
@@ -33,7 +35,7 @@ $sm: 1rem
 	-moz-box-sizing: border-box
 	box-sizing: border-box
 	
-
++gvBgSizeS(h1,cover)
 
 html,body
 	height: 100%
@@ -95,44 +97,4 @@ table
 label
 	font-weight: normal
 
-.form
-	&-group
-		margin-bottom: 3rem
-	&-control
-
-.nav
-	&-tabs
-		&>li
-			&.active>a
-			&>a
-
-.pagination
-	&>li
-		&.active>a
-		&>a
-
-.breadcrumb
-	&>li
-		&.active>a
-		&>a
-
-.carousel
-	&-indicators
-		width: auto
-		margin: 0
-		left: auto
-		right: auto
-		bottom: 0
-		padding: 1rem 0
-		&>li
-.panel
-	&-group
-
-	&-heading
-
-	&-content
-
-	&-body
-
-//later adds
 

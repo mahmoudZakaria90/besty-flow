@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+h1 {
+  background-size: cover;
+}
+
 html, body {
   height: 100%;
 }
@@ -127,19 +131,6 @@ h6 a {
 
 label {
   font-weight: normal;
-}
-
-.form-group {
-  margin-bottom: 3rem;
-}
-
-.carousel-indicators {
-  width: auto;
-  margin: 0;
-  left: auto;
-  right: auto;
-  bottom: 0;
-  padding: 1rem 0;
 }
 
 /* Grid System */
@@ -474,4 +465,14 @@ label {
   -ms-align-items: flex-end;
   -o-align-items: flex-end;
   align-items: flex-end;
+}
+
+.test {
+  width: 100px;
+  height: 100px;
+}
+
+.didy {
+  width: 100px;
+  height: 100px;
 }
