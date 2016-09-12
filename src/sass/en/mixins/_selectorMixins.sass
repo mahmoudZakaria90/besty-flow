@@ -1,5 +1,5 @@
 // mixins per create selector, can be called any where in the document
-=gvFlexSelf($selector,$value)
+=gvFlexSelf_sct($selector,$value)
 	#{$selector}
 		-webkit-align-self: $value
 		-moz-align-self: $value
@@ -7,11 +7,12 @@
 		-ms-align-self: $value
 		align-self: $value
 
-=gvSizeS($selector,$width,$height)
+=gvSize_sct($selector,$width,$height)
 	#{$selector}
 		width: $width
 		height: $height
-=gvBgSizeS($selector,$value)
+		
+=gvBgSize_sct($selector,$value)
 	#{$selector}
 		background-size: $value
 
@@ -21,7 +22,7 @@
 =gv($selector,$property,$value)
 	#{$selector}
 		#{$property}: $value
-		
+
 // Works perfect with prefixes properties
 =gvPre($selector,$property,$value)
 	#{$selector}
