@@ -471,7 +471,3 @@ label {
   -o-align-items: flex-end;
   align-items: flex-end;
 }
-
-.go {
-  align-self: center;
-}

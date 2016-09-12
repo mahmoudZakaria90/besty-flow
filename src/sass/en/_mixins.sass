@@ -1,4 +1,4 @@
-//Registered mixins
+//Regular mixins
 
 =marginSizes()
 	&-lg
@@ -80,7 +80,20 @@
 	align-items: flex-end
 
 
+
+// called mixins by value
+=flexSelf($value)
+	align-self: $value
+
+
+// called mixins by selector
 =flexSelf($selector,$value)
 	#{$selector}
 		align-self: $value
 
+
+//Top agent mixin
+// works perfect with non-prefixes properties
+=give($selector,$property,$value)
+	#{$selector}
+		#{$property}: $value
