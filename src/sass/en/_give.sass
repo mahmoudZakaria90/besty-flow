@@ -1,5 +1,5 @@
 //Regular give.css
-.give
+.gv
 	//fonts
 	&-main-face
 		font-family: $main-face
@@ -44,28 +44,28 @@
 
 	&-margin
 		margin: $reg
-		+marginSizes()
+		+gvMarginSizes()
 		&-tb
 			margin: $reg 0
-			+marginSizes()
+			+gvMarginSizes()
 
 		&-lr
 			margin: 0 $reg
-			+marginSizes()
+			+gvMarginSizes()
 		&-bottom
 			margin-bottom: $reg
-			+marginSizes()
+			+gvMarginSizes()
 
 	&-padding
 		padding: $reg
-		+paddingSizes()
+		+gvPaddingSizes()
 		&-tb
 			padding: $reg 0
-			+paddingSizes()
+			+gvPaddingSizes()
 
 		&-lr
 			padding: 0 $reg
-			+paddingSizes()
+			+gvPaddingSizes()
 
 	//float
 	
@@ -97,6 +97,11 @@
 	//background-other stuff
 	&-no-repeat
 		background-repeat: no-repeat
+	// this is for post-images & thumbs
+
+	&-thumb
+		background-size: cover
+		background-position: center center
 
 	//displays
 
@@ -114,36 +119,36 @@
 
 	//FLEX
 	&-flex
-		+flexBox()
+		+gvFlexBox()
 		&>*
 			flex: 1 0 auto
 		&-column
-			+flexColumn()
+			+gvFlexColumn()
 
 		&-wrap
-			+flexWrap()
+			+gvFlexWrap()
 
 		&-center
-			+flexCenter-v()
-			+flexCenter-h()
+			+gvFlexCenter-v()
+			+gvFlexCenter-h()
 			&-h
-				+flexCenter-h()
+				+gvFlexCenter-h()
 			&-v
-				+flexCenter-v()
+				+gvFlexCenter-v()
 		&-start
-			+flexStart-h()
-			+flexStart-v()
+			+gvFlexStart-h()
+			+gvFlexStart-v()
 			&-h
-				+flexStart-h()
+				+gvFlexStart-h()
 			&-v
-				+flexStart-v()
+				+gvFlexStart-v()
 		&-end
-			+flexEnd-h()
-			+flexEnd-v()
+			+gvFlexEnd-h()
+			+gvFlexEnd-v()
 			&-h
-				+flexEnd-h()
+				+gvFlexEnd-h()
 			&-v
-				+flexEnd-v()
+				+gvFlexEnd-v()
 		//to be continued
 
 	
