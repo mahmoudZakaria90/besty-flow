@@ -75,7 +75,7 @@
 		&-right
 			float: right
 
-	//color & background
+	//color & background-color
 	&-color-main
 		color: $main-color
 
@@ -85,14 +85,18 @@
 	&-color-third
 		color: $third-color
 
-	&-background-main
-		background: $main-color
+	&-bg-main
+		background-color: $main-color
 
-	&-background-second
-		background: $second-color
+	&-bg-second
+		background-color: $second-color
 
-	&-background-third
-		background: $third-color
+	&-bg-third
+		background-color: $third-color
+
+	//background-other stuff
+	&-no-repeat
+		background-repeat: no-repeat
 
 	//displays
 
@@ -140,3 +144,6 @@
 				+flexEnd-h()
 			&-v
 				+flexEnd-v()
+		//to be continued
+
+	

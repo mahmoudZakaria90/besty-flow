@@ -348,14 +348,17 @@ label {
 .give-color-third {
   color: #fff;
 }
-.give-background-main {
-  background: #1a1a1a;
+.give-bg-main {
+  background-color: #1a1a1a;
 }
-.give-background-second {
-  background: #97783c;
+.give-bg-second {
+  background-color: #97783c;
 }
-.give-background-third {
-  background: #fff;
+.give-bg-third {
+  background-color: #fff;
+}
+.give-no-repeat {
+  background-repeat: no-repeat;
 }
 .give-block {
   display: block;
