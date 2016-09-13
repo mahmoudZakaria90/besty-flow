@@ -129,6 +129,13 @@ label {
   font-weight: normal;
 }
 
+.test {
+  font-family: sans-serif;
+  font-size: 16;
+  margin: 10px 15px;
+  border-left: 2px solid black;
+}
+
 /* Grid System */
 .col-md-all {
   width: 100%;
@@ -462,6 +469,9 @@ label {
 .gv-bg-no-repeat {
   background-repeat: no-repeat;
 }
+.gv-bg-contain {
+  background-size: contain;
+}
 .gv-block {
   display: block;
 }
@@ -474,11 +484,14 @@ label {
 .gv-list-item {
   display: list-item;
 }
-.gv-no-bullet {
-  list-style: none;
-}
 .gv-decimal {
   list-style: decimal;
+}
+.gv-no-padding {
+  padding: 0;
+}
+.gv-no-bullet {
+  list-style: none;
 }
 .gv-relative {
   position: relative;

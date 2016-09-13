@@ -167,6 +167,9 @@
 		&-no-repeat
 			background-repeat: no-repeat
 
+		&-contain
+			background-size: contain
+
 	//displays
 	&-block
 		display: block
@@ -181,11 +184,15 @@
 			display: list-item
 
 	//lists
-	&-no-bullet
-		list-style: none
 	&-decimal
 		list-style: decimal
 
+	//no
+	&-no
+		&-padding
+			padding: 0
+		&-bullet
+			list-style: none
 
 	//positions
 	&-relative
@@ -231,7 +238,8 @@
 				+gvFlexEnd-h()
 			&-v
 				+gvFlexEnd-v()
-		//to be continued
+
+		//Continue after me...
 
 
 		

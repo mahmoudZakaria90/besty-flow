@@ -1,14 +1,26 @@
 // called mixins by value, called inside the selector only
-=gvFlexSelf($value)
+=gvFlexSelf_val($value)
 	-webkit-align-self: $value
 	-moz-align-self: $value
 	-o-align-self: $value
 	-ms-align-self: $value
 	align-self: $value
 
-=gvSize($width,$height)
+=gvSize_val($width,$height)
 	width: $width
 	height: $height
 
-=gvBgSize($value)
-	background-size: $value
+=gvFont_val($family,$size,$weight)
+	font:
+		family: $family
+		size: $size
+		weight: $weight
+
+=gvMargin_val($val...)
+	margin: $val
+
+=gvPadding_val($val...)
+	padding: $val
+
+=gvBorder_val($side,$width,$type,$color)
+	border-#{$side}: $width $type $color
