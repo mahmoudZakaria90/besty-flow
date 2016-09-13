@@ -477,6 +477,9 @@ label {
 .gv-no-bullet {
   list-style: none;
 }
+.gv-decimal {
+  list-style: decimal;
+}
 .gv-relative {
   position: relative;
 }
