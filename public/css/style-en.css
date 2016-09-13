@@ -245,6 +245,9 @@ label {
 .gv-margin-sm {
   margin: 1rem;
 }
+.gv-margin-auto {
+  margin: 0 auto;
+}
 .gv-margin-tb {
   margin: 1.5rem 0;
 }
@@ -483,7 +486,7 @@ label {
 .gv-fixed {
   position: fixed;
 }
-.gv-fixed-default {
+.gv-position-default {
   top: 0;
   left: 0;
 }

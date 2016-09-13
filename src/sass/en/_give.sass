@@ -39,6 +39,10 @@
 	&-margin
 		margin: $reg
 		+gvMargin()
+
+		&-auto
+			margin: 0 auto
+
 		&-tb
 			margin: $reg 0
 			+gvMarginTB()
@@ -77,7 +81,7 @@
 			+gvPaddingTP()
 
 		&-right
-			padding-right:  $reg
+			padding-#{$dir-opp}: $reg
 			+gvPaddingRT()
 
 		&-bottom
@@ -85,7 +89,7 @@
 			+gvPaddingBT()
 
 		&-left
-			padding-left:  $reg
+			padding-#{$dir}: $reg
 			+gvPaddingLF()
 
 	//borders
@@ -188,9 +192,10 @@
 		position: absolute
 	&-fixed
 		position: fixed
-		&-default
-			top: 0
-			#{$dir}: 0
+		
+	&-position-default
+		top: 0
+		#{$dir}: 0
 
 	//FLEX
 	&-flex
