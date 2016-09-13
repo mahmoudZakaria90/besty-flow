@@ -1,5 +1,3 @@
-@import mixins/regMixins
-
 //Regular give.css
 .gv
 	//fonts
@@ -42,28 +40,55 @@
 
 	&-margin
 		margin: $reg
-		+gvMarginSizes()
+		+gvMargin()
 		&-tb
 			margin: $reg 0
-			+gvMarginSizes()
+			+gvMarginTB()
 
-		&-lr
+		&-rl
 			margin: 0 $reg
-			+gvMarginSizes()
+			+gvMarginRL()
+		&-top
+			margin-top:  $reg
+			+gvMarginTP()
+
+		&-right
+			margin-right:  $reg
+			+gvMarginRT()
+
 		&-bottom
 			margin-bottom: $reg
-			+gvMarginSizes()
+			+gvMarginBT()
+
+		&-left
+			margin-left:  $reg
+			+gvMarginLF()
 
 	&-padding
 		padding: $reg
-		+gvPaddingSizes()
+		+gvPadding()
 		&-tb
 			padding: $reg 0
-			+gvPaddingSizes()
+			+gvPaddingTB()
 
-		&-lr
+		&-rl
 			padding: 0 $reg
-			+gvPaddingSizes()
+			+gvPaddingRL()
+		&-top
+			padding-top:  $reg
+			+gvPaddingTP()
+
+		&-right
+			padding-right:  $reg
+			+gvPaddingRT()
+
+		&-bottom
+			padding-bottom: $reg
+			+gvPaddingBT()
+
+		&-left
+			padding-left:  $reg
+			+gvPaddingLF()
 
 	//float
 	
@@ -149,4 +174,7 @@
 				+gvFlexEnd-v()
 		//to be continued
 
-	
+
+		//borders
+		&-radius
+			+gvRadius()
