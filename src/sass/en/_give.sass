@@ -93,6 +93,23 @@
 	//borders
 		&-border
 			border: $reg solid $border-color-default
+			+gvBorder()
+
+			&-top
+				border-top: $reg solid $border-color-default
+				+gvBorderTP()
+
+			&-right
+				border-right: $reg solid $border-color-default
+				+gvBorderRT()
+
+			&-bottom
+				border-bottom: $reg solid $border-color-default
+				+gvBorderBT()
+
+			&-left
+				border-bottom: $reg solid $border-color-default
+				+gvBorderLF()
 	//float
 	
 	&-float
@@ -121,13 +138,33 @@
 		background-color: $third-color
 
 	//background-other stuff
-	&-no-repeat
-		background-repeat: no-repeat
-	// this is for post-images & thumbs
+	&-bg
+		&-center
+			background-position: center center
+			&-top
+				background-position: center top
+			&-bottom
+				background-position: center bottom
+		&-left
+			background-position: left center
+			&-top
+				background-position: left top
+			&-bottom
+				background-position: left bottom
 
-	&-thumb
-		background-size: cover
-		background-position: center center
+		&-right
+			background-position: right center
+			&-top
+				background-position: right top
+			&-bottom
+				background-position: right bottom
+
+		&-thumb
+			background-size: cover
+			background-position: center center
+
+		&-no-repeat
+			background-repeat: no-repeat
 
 	//displays
 

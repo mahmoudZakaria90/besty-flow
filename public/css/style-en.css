@@ -425,12 +425,39 @@ label {
 .gv-bg-third {
   background-color: #fff;
 }
-.gv-no-repeat {
-  background-repeat: no-repeat;
+.gv-bg-center {
+  background-position: center center;
 }
-.gv-thumb {
+.gv-bg-center-top {
+  background-position: center top;
+}
+.gv-bg-center-bottom {
+  background-position: center bottom;
+}
+.gv-bg-left {
+  background-position: left center;
+}
+.gv-bg-left-top {
+  background-position: left top;
+}
+.gv-bg-left-bottom {
+  background-position: left bottom;
+}
+.gv-bg-right {
+  background-position: right center;
+}
+.gv-bg-right-top {
+  background-position: right top;
+}
+.gv-bg-right-bottom {
+  background-position: right bottom;
+}
+.gv-bg-thumb {
   background-size: cover;
   background-position: center center;
+}
+.gv-bg-no-repeat {
+  background-repeat: no-repeat;
 }
 .gv-block {
   display: block;
