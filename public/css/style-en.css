@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "open-sans";
+  src: url(/fonts/OpenSans-Regular.tff) format("truetype");
+}
 /*Custom CSS */
 /*============ */
 * {
@@ -14,7 +18,7 @@ html, body {
 }
 
 body {
-  font-family: "optima", "Open Sans", sans-serif;
+  font-family: "open-sans", sans-serif;
   font-size: 10px;
   line-height: 1.5;
   color: #1a1a1a;
@@ -134,6 +138,8 @@ label {
   font-size: 16;
   margin: 10px 15px;
   border-left: 2px solid black;
+  -webkit-transition: all 250ms ease-in, color 150ms ease-out;
+  transition: all 250ms ease-in, color 150ms ease-out;
 }
 
 /* Grid System */
@@ -205,7 +211,7 @@ label {
 }
 
 .gv-main-face {
-  font-family: "optima", "Open Sans", sans-serif;
+  font-family: "open-sans", sans-serif;
 }
 .gv-second-face {
   font-family: "Open Sans", sans-serif;

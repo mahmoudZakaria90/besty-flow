@@ -1,4 +1,4 @@
-// called mixins by value, called inside the selector only
+// called mixins per value, called inside the selector only
 =gvFlexSelf_val($value)
 	-webkit-align-self: $value
 	-moz-align-self: $value
@@ -24,3 +24,11 @@
 
 =gvBorder_val($side,$width,$type,$color)
 	border-#{$side}: $width $type $color
+
+=gvTransition_val($val...)
+	-webkit-transition: $val
+	transition: $val
+
+=gvAnimation_val($val...)
+	-webkit-animation: $val
+	animation: $val
