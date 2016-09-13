@@ -1,3 +1,16 @@
+//direction
+$direction:'left'
+$dir: null
+$dir-opp: null
+
+@if $direction == 'left'
+	$dir: left
+	$dir-opp: right
+@else
+	$dir: right
+	$dir-opp: left
+
+
 //Typography vars
 $main-font: 1.6rem
 $h1: 3.4rem

@@ -26,18 +26,16 @@
 		text-transform: capitalize
 
 	// alignments
-
 	&-align-left
-		text-align: left
+		text-align: $dir
 
 	&-align-right
-		text-align: right
+		text-align: $dir-opp
 
 	&-align-center
 		text-align: center
 
 	// padding & margin
-
 	&-margin
 		margin: $reg
 		+gvMargin()
@@ -53,7 +51,7 @@
 			+gvMarginTP()
 
 		&-right
-			margin-right:  $reg
+			margin-#{$dir-opp}:  $reg
 			+gvMarginRT()
 
 		&-bottom
@@ -61,7 +59,7 @@
 			+gvMarginBT()
 
 		&-left
-			margin-left:  $reg
+			margin-#{$dir}:  $reg
 			+gvMarginLF()
 
 	&-padding
@@ -111,7 +109,6 @@
 				border-bottom: $reg solid $border-color-default
 				+gvBorderLF()
 	//float
-	
 	&-float
 		&-left
 			float: left
@@ -167,7 +164,6 @@
 			background-repeat: no-repeat
 
 	//displays
-
 	&-block
 		display: block
 
@@ -179,6 +175,22 @@
 	&-list
 		&-item
 			display: list-item
+
+	//lists
+	&-no-bullet
+		list-style: none
+
+
+	//positions
+	&-relative
+		position: relative
+	&-absolute
+		position: absolute
+	&-fixed
+		position: fixed
+		&-default
+			top: 0
+			#{$dir}: 0
 
 	//FLEX
 	&-flex

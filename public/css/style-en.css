@@ -471,6 +471,22 @@ label {
 .gv-list-item {
   display: list-item;
 }
+.gv-no-bullet {
+  list-style: none;
+}
+.gv-relative {
+  position: relative;
+}
+.gv-absolute {
+  position: absolute;
+}
+.gv-fixed {
+  position: fixed;
+}
+.gv-fixed-default {
+  top: 0;
+  left: 0;
+}
 .gv-flex {
   display: -webkit-flex;
   display: -moz-flex;
