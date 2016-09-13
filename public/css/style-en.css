@@ -546,6 +546,3 @@ label {
   -o-align-items: flex-end;
   align-items: flex-end;
 }
-.gv-flex-radius {
-  border-radius: 0.5rem;
-}
