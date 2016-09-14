@@ -1,0 +1,79 @@
+/*Custom CSS*/
+/*============*/
+
+*
+	margin: 0
+	padding: 0
+	outline: 0!important
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	
+
+html,body
+	height: 100%
+
+
+body
+	font-family: $main-face
+	font-size: 10px
+	line-height: 1.5
+	color: $main-color
+	font-weight: 400
+
+/*Give All anchors a transition*/
+a,button,.btn
+	-webkit-transition: all .45s
+	transition: all .45s
+
+
+img  
+	max-width: 100%
+	vertical-align: middle
+	border: none
+
+p , ul , form , table , div , ol
+	font-size: $main-font
+
+h1
+	font-size: $h1
+
+h2
+	font-size: $h2
+
+h3
+	font-size: $h3
+
+h4
+	font-size: $h4
+
+
+p
+	margin:  0 0 15px 0
+
+table
+	tr,td
+		border: 1px solid #ddd
+
+@for $i from 1 through 6
+	h#{$i}
+		margin:  0 0 15px 0
+		font-weight: inherit
+		line-height: inherit
+		a
+			color: inherit
+			font-size: inherit
+
+.fa
+	margin: 0 1.5rem 0
+
+label
+	font-weight: normal
+
+
+.test
+	+gvFont_val(sans-serif,16px,null)
+	+gvMargin_val(10px 15px)
+	+gvBorder_val(left,2px,solid,black)
+	+gvTransition_val(all 250ms ease-in,color 150ms ease-out)
+	+gvGradient_val(radial,55% 60%,green,red,blue,yellow)

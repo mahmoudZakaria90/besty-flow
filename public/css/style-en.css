@@ -227,6 +227,32 @@ label {
   padding: 0 15px;
 }
 
+.go {
+  -webkit-align-self: flex-end;
+  -moz-align-self: flex-end;
+  -o-align-self: flex-end;
+  -ms-align-self: flex-end;
+  align-self: flex-end;
+}
+
+.go {
+  width: 100px;
+  height: 100px;
+}
+
+.aloo {
+  background-image: radial-gradient(closest-side at 55% 40%, red, green, blue);
+}
+
+.aloo {
+  background-color: red;
+}
+
+.test {
+  width: 100px;
+  height: 100px;
+}
+
 .gv-main-face {
   font-family: "open-sans", sans-serif;
 }
