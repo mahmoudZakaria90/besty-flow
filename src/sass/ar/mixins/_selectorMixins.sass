@@ -31,6 +31,10 @@
 	#{$selector}
 		border-#{$side}: $width $style $color
 
+=gvRadius_sct($selector,$top-left,$top-right,$bottom-left,$bottom-right)
+	#{$selector}
+		border-radius: $top-left $top-right $bottom-right $bottom-left
+
 =gvTransition_sct($selector,$value...)
 	#{$selector}
 		-webkit-transition: $value
@@ -40,6 +44,10 @@
 	#{$selector}
 		-webkit-animation: $value
 		animation: $value
+
+=gvShadow_sct($selector,$type,$value...)
+	#{$selector}
+		#{$type}-shadow: $value
 
 //Gradient
 =gvGradient_sct($selector,$type,$colorStops...)

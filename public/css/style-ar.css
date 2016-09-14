@@ -519,6 +519,12 @@ label {
   top: 0;
   right: 0;
 }
+.gv-shadow-box {
+  box-shadow: 2px 2px 2px #ddd;
+}
+.gv-shadow-text {
+  text-shadow: 2px 2px 2px #ddd;
+}
 .gv-flex {
   display: -webkit-flex;
   display: -moz-flex;
