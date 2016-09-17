@@ -247,6 +247,9 @@ label {
 .gv-underline {
   text-decoration: underline;
 }
+.gv-underline-no {
+  text-decoration: none;
+}
 .gv-uppercase {
   text-transform: uppercase;
 }

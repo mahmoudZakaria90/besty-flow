@@ -7,28 +7,33 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 0 !important;
+  outline: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-html, body {
+:root {
+  font-size: 10px;
+}
+
+html,
+body {
   height: 100%;
 }
 
 body {
   font-family: "open-sans", sans-serif;
-  font-size: 10px;
   line-height: 1.5;
   color: #1a1a1a;
   font-weight: 400;
 }
 
-/*Give All anchors a transition */
-a, button, .btn {
-  -webkit-transition: all 0.45s;
-  transition: all 0.45s;
+/*Give All anchors/button a transition */
+a,
+button {
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
 }
 
 img {
@@ -37,7 +42,14 @@ img {
   border: none;
 }
 
-p, ul, form, table, div, ol {
+p,
+ul,
+ol,
+table,
+form,
+button,
+div,
+span {
   font-size: 1.6rem;
 }
 
@@ -234,6 +246,9 @@ label {
 }
 .gv-underline {
   text-decoration: underline;
+}
+.gv-underline-no {
+  text-decoration: none;
 }
 .gv-uppercase {
   text-transform: uppercase;
