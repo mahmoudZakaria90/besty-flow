@@ -24,6 +24,7 @@ body {
 
 body {
   font-family: "open-sans", sans-serif;
+  font-size: 1.6rem;
   line-height: 1.5;
   color: #1a1a1a;
   font-weight: 400;
@@ -41,17 +42,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
   border: none;
-}
-
-p,
-ul,
-ol,
-table,
-form,
-button,
-div,
-span {
-  font-size: 1.6rem;
 }
 
 h1 {
@@ -170,6 +160,14 @@ label {
 
 input {
   border: none;
+}
+
+::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+::-moz-placeholder {
+  color: #aaa;
 }
 
 button,
