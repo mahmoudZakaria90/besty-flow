@@ -453,6 +453,78 @@ button:active {
 .gv-padding-left-sm {
   padding-right: 1rem;
 }
+.gv-border {
+  border: 1.5rem solid #ddd;
+}
+.gv-border-lg {
+  border: 4rem solid #ddd;
+}
+.gv-border-md {
+  border: 2rem solid #ddd;
+}
+.gv-border-sm {
+  border: 1rem solid #ddd;
+}
+.gv-border-top {
+  border-top: 1.5rem solid #ddd;
+}
+.gv-border-top-lg {
+  border-top: 4rem solid #ddd;
+}
+.gv-border-top-md {
+  border-top: 2rem solid #ddd;
+}
+.gv-border-top-sm {
+  border-top: 1rem solid #ddd;
+}
+.gv-border-right {
+  border-right: 1.5rem solid #ddd;
+}
+.gv-border-right-lg {
+  border-right: 4rem solid #ddd;
+}
+.gv-border-right-md {
+  border-right: 2rem solid #ddd;
+}
+.gv-border-right-sm {
+  border-right: 1rem solid #ddd;
+}
+.gv-border-bottom {
+  border-bottom: 1.5rem solid #ddd;
+}
+.gv-border-bottom-lg {
+  border-bottom: 4rem solid #ddd;
+}
+.gv-border-bottom-md {
+  border-bottom: 2rem solid #ddd;
+}
+.gv-border-bottom-sm {
+  border-bottom: 1rem solid #ddd;
+}
+.gv-border-left {
+  border-bottom: 1.5rem solid #ddd;
+}
+.gv-border-left-lg {
+  border-left: 4rem solid #ddd;
+}
+.gv-border-left-md {
+  border-left: 2rem solid #ddd;
+}
+.gv-border-left-sm {
+  border-left: 1rem solid #ddd;
+}
+.gv-radius {
+  border-radius: 0.5rem;
+}
+.gv-radius-lg {
+  border-radius: 2rem;
+}
+.gv-radius-md {
+  border-radius: 1rem;
+}
+.gv-radius-sm {
+  border-radius: 0.2rem;
+}
 .gv-float-left {
   float: left;
 }

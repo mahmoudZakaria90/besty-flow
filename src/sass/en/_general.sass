@@ -10,7 +10,7 @@
 	-moz-box-sizing: border-box
 	box-sizing: border-box
 	
-
+//base font size
 \:root
 	font-size: 10px
 
@@ -58,15 +58,19 @@ h3
 h4
 	font-size: $h4
 
-p
+h1,h2,h3,h4,h5,h6,p
 	margin:  0 0 15px 0
 
 button
 	@extend %btn
 
 table
-	tr,td
+	width: 100%
+	border-spacing: 0
+	border-collapse: collapse
+	&,tr,td
 		border: 1px solid $border-color-default
+		
 
 @for $i from 1 through 6
 	h#{$i}
@@ -83,5 +87,9 @@ table
 
 label
 	font-weight: normal
+
+.form
+	&-control
+		
 
 
