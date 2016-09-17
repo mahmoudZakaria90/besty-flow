@@ -145,6 +145,20 @@ label {
   font-weight: normal;
 }
 
+button {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  padding: 0.3em 1.5em;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 5px #ddd;
+}
+button:active {
+  box-shadow: inset 0 2px 5px #ddd;
+  top: 1px;
+}
+
 .gv-1 {
   width: 8.33333%;
   position: relative;
