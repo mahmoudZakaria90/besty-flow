@@ -27,7 +27,8 @@ body
 
 /*Give All anchors/button a transition*/
 a,
-button
+button,
+input
 	+gvTransition_val(all 450ms)
 
 
@@ -59,11 +60,24 @@ h4
 	font-size: $h4
 
 p
-	margin:  0 0 1.5rem 0
+	margin:  0 0 $reg 0
 
-button
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
 	@extend %btn
 
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="number"]
+	padding: .6rem $reg
+	border: .1rem solid $border-color-default
+	border-radius: $border-radius-reg
+	&:focus
+		border-color: $second-color
 table
 	width: 100%
 	border-spacing: 0
@@ -74,7 +88,7 @@ table
 
 @for $i from 1 through 6
 	h#{$i}
-		margin:  0 0 15px 0
+		margin:  0 0 $reg 0
 		font-weight: inherit
 		line-height: inherit
 		a
@@ -83,7 +97,7 @@ table
 
 //font-awesome icons
 .fa
-	margin: 0 1.5rem 0
+	margin: 0 $reg 0
 
 label
 	font-weight: normal
