@@ -243,6 +243,18 @@ button:active {
   padding: 0 15px;
 }
 
+.row {
+  margin: 0 -1.5rem;
+}
+
+.clf:before, .clf:after {
+  content: " ";
+  display: table;
+}
+.clf:after {
+  clear: both;
+}
+
 .gv-main-face {
   font-family: "open-sans", sans-serif;
 }
@@ -454,64 +466,64 @@ button:active {
   padding-right: 1rem;
 }
 .gv-border {
-  border: 1.5rem solid #ddd;
+  border: 0.2rem solid #ddd;
 }
 .gv-border-lg {
-  border: 4rem solid #ddd;
+  border: 0.4rem solid #ddd;
 }
 .gv-border-md {
-  border: 2rem solid #ddd;
+  border: 0.3rem solid #ddd;
 }
 .gv-border-sm {
-  border: 1rem solid #ddd;
+  border: 0.1rem solid #ddd;
 }
 .gv-border-top {
-  border-top: 1.5rem solid #ddd;
+  border-top: 0.2rem solid #ddd;
 }
 .gv-border-top-lg {
-  border-top: 4rem solid #ddd;
+  border-top: 0.4rem solid #ddd;
 }
 .gv-border-top-md {
-  border-top: 2rem solid #ddd;
+  border-top: 0.3rem solid #ddd;
 }
 .gv-border-top-sm {
-  border-top: 1rem solid #ddd;
+  border-top: 0.1rem solid #ddd;
 }
 .gv-border-right {
-  border-right: 1.5rem solid #ddd;
+  border-right: 0.2rem solid #ddd;
 }
 .gv-border-right-lg {
-  border-right: 4rem solid #ddd;
+  border-right: 0.4rem solid #ddd;
 }
 .gv-border-right-md {
-  border-right: 2rem solid #ddd;
+  border-right: 0.3rem solid #ddd;
 }
 .gv-border-right-sm {
-  border-right: 1rem solid #ddd;
+  border-right: 0.1rem solid #ddd;
 }
 .gv-border-bottom {
-  border-bottom: 1.5rem solid #ddd;
+  border-bottom: 0.2rem solid #ddd;
 }
 .gv-border-bottom-lg {
-  border-bottom: 4rem solid #ddd;
+  border-bottom: 0.4rem solid #ddd;
 }
 .gv-border-bottom-md {
-  border-bottom: 2rem solid #ddd;
+  border-bottom: 0.3rem solid #ddd;
 }
 .gv-border-bottom-sm {
-  border-bottom: 1rem solid #ddd;
+  border-bottom: 0.1rem solid #ddd;
 }
 .gv-border-left {
-  border-bottom: 1.5rem solid #ddd;
+  border-bottom: 0.2rem solid #ddd;
 }
 .gv-border-left-lg {
-  border-left: 4rem solid #ddd;
+  border-left: 0.4rem solid #ddd;
 }
 .gv-border-left-md {
-  border-left: 2rem solid #ddd;
+  border-left: 0.3rem solid #ddd;
 }
 .gv-border-left-sm {
-  border-left: 1rem solid #ddd;
+  border-left: 0.1rem solid #ddd;
 }
 .gv-radius {
   border-radius: 0.5rem;
