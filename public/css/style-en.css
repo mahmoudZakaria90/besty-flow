@@ -1,8 +1,9 @@
+/*@font-face */
 @font-face {
   font-family: "open-sans";
   src: url(fonts/OpenSans-Regular.tff) format("truetype");
 }
-/*Custom CSS */
+/*General */
 /*============ */
 * {
   margin: 0;
@@ -65,8 +66,14 @@ h4 {
   font-size: 1.8rem;
 }
 
-p {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 1.5rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1.5rem 0;
+  font-weight: inherit;
+  line-height: inherit;
 }
 
 input[type="text"],
@@ -95,61 +102,31 @@ table, table tr, table td {
   border: 1px solid #ddd;
 }
 
-h1 {
-  margin: 0 0 1.5rem 0;
-  font-weight: inherit;
-  line-height: inherit;
-}
 h1 a {
   color: inherit;
   font-size: inherit;
 }
 
-h2 {
-  margin: 0 0 1.5rem 0;
-  font-weight: inherit;
-  line-height: inherit;
-}
 h2 a {
   color: inherit;
   font-size: inherit;
 }
 
-h3 {
-  margin: 0 0 1.5rem 0;
-  font-weight: inherit;
-  line-height: inherit;
-}
 h3 a {
   color: inherit;
   font-size: inherit;
 }
 
-h4 {
-  margin: 0 0 1.5rem 0;
-  font-weight: inherit;
-  line-height: inherit;
-}
 h4 a {
   color: inherit;
   font-size: inherit;
 }
 
-h5 {
-  margin: 0 0 1.5rem 0;
-  font-weight: inherit;
-  line-height: inherit;
-}
 h5 a {
   color: inherit;
   font-size: inherit;
 }
 
-h6 {
-  margin: 0 0 1.5rem 0;
-  font-weight: inherit;
-  line-height: inherit;
-}
 h6 a {
   color: inherit;
   font-size: inherit;
@@ -201,6 +178,7 @@ input[type="button"]:hover {
   background-color: #97783c;
 }
 
+/*Grid */
 .gv-1 {
   width: 8.33333%;
   position: relative;
@@ -303,6 +281,11 @@ input[type="button"]:hover {
   margin: 0 auto;
 }
 
+/*Header */
+/*Footer */
+/*Custom */
+/* @keyframes & transitions */
+/*Regular give.css */
 .gv-main-face {
   font-family: "open-sans", sans-serif;
 }
@@ -712,7 +695,7 @@ input[type="button"]:hover {
   display: flex;
 }
 .gv-flex > * {
-  flex: 1 0 auto;
+  flex: 1 0;
 }
 .gv-flex-column {
   -webkit-flex-direction: column;
