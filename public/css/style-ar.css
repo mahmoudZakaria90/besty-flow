@@ -164,6 +164,7 @@ h6 a {
 
 .fa {
   margin: 0 1.5rem 0;
+  text-decoration: none;
 }
 
 label {
@@ -334,9 +335,6 @@ input[type="button"]:hover {
 .gv-underline {
   text-decoration: underline;
 }
-.gv-underline-no {
-  text-decoration: none;
-}
 .gv-uppercase {
   text-transform: uppercase;
 }
@@ -362,7 +360,7 @@ input[type="button"]:hover {
   margin: 4rem;
 }
 .gv-margin-md {
-  margin: 2rem;
+  margin: 3rem;
 }
 .gv-margin-sm {
   margin: 1rem;
@@ -377,7 +375,7 @@ input[type="button"]:hover {
   margin: 4rem 0;
 }
 .gv-margin-tb-md {
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 .gv-margin-tb-sm {
   margin: 1rem 0;
@@ -389,7 +387,7 @@ input[type="button"]:hover {
   margin: 0 4rem;
 }
 .gv-margin-rl-md {
-  margin: 0 2rem;
+  margin: 0 3rem;
 }
 .gv-margin-rl-sm {
   margin: 0 1rem;
@@ -401,7 +399,7 @@ input[type="button"]:hover {
   margin-top: 4rem;
 }
 .gv-margin-top-md {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .gv-margin-top-sm {
   margin-top: 1rem;
@@ -413,7 +411,7 @@ input[type="button"]:hover {
   margin-left: 4rem;
 }
 .gv-margin-right-md {
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 .gv-margin-right-sm {
   margin-left: 1rem;
@@ -425,7 +423,7 @@ input[type="button"]:hover {
   margin-bottom: 4rem;
 }
 .gv-margin-bottom-md {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .gv-margin-bottom-sm {
   margin-bottom: 1rem;
@@ -437,7 +435,7 @@ input[type="button"]:hover {
   margin-right: 4rem;
 }
 .gv-margin-left-md {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 .gv-margin-left-sm {
   margin-right: 1rem;
@@ -449,7 +447,7 @@ input[type="button"]:hover {
   padding: 4rem;
 }
 .gv-padding-md {
-  padding: 2rem;
+  padding: 3rem;
 }
 .gv-padding-sm {
   padding: 1rem;
@@ -461,7 +459,7 @@ input[type="button"]:hover {
   padding: 4rem 0;
 }
 .gv-padding-tb-md {
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 .gv-padding-tb-sm {
   padding: 1rem 0;
@@ -473,7 +471,7 @@ input[type="button"]:hover {
   padding: 0 4rem;
 }
 .gv-padding-rl-md {
-  padding: 0 2rem;
+  padding: 0 3rem;
 }
 .gv-padding-rl-sm {
   padding: 0 1rem;
@@ -485,7 +483,7 @@ input[type="button"]:hover {
   padding-top: 4rem;
 }
 .gv-padding-top-md {
-  padding-top: 2rem;
+  padding-top: 3rem;
 }
 .gv-padding-top-sm {
   padding-top: 1rem;
@@ -497,7 +495,7 @@ input[type="button"]:hover {
   padding-left: 4rem;
 }
 .gv-padding-right-md {
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 .gv-padding-right-sm {
   padding-left: 1rem;
@@ -509,7 +507,7 @@ input[type="button"]:hover {
   padding-bottom: 4rem;
 }
 .gv-padding-bottom-md {
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 .gv-padding-bottom-sm {
   padding-bottom: 1rem;
@@ -521,7 +519,7 @@ input[type="button"]:hover {
   padding-right: 4rem;
 }
 .gv-padding-left-md {
-  padding-right: 2rem;
+  padding-right: 3rem;
 }
 .gv-padding-left-sm {
   padding-right: 1rem;
@@ -603,6 +601,9 @@ input[type="button"]:hover {
 }
 .gv-float-right {
   float: left;
+}
+.gv-clear {
+  clear: both;
 }
 .gv-color-main {
   color: #1a1a1a;
@@ -686,6 +687,12 @@ input[type="button"]:hover {
 .gv-no-margin {
   margin: 0;
 }
+.gv-no-float {
+  float: none;
+}
+.gv-no-underline {
+  text-decoration: none;
+}
 .gv-relative {
   position: relative;
 }
@@ -721,7 +728,8 @@ input[type="button"]:hover {
   display: flex;
 }
 .gv-flex > * {
-  flex: 1 0;
+  flex-grow: 1;
+  flex-shrink: 0;
 }
 .gv-flex-row {
   flex-direction: row;
