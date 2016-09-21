@@ -741,7 +741,7 @@ input[type="button"]:hover {
 .gv-flex {
   display: flex;
 }
-.gv-flex > * {
+.gv-flex-grow {
   flex-grow: 1;
   flex-shrink: 0;
 }
