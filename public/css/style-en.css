@@ -297,6 +297,9 @@ input[type="button"]:hover {
   overflow: hidden;
   height: 0;
 }
+.header-burger:active {
+  top: 0;
+}
 .header-nav-wrap li a {
   display: block;
   padding: 1rem;
