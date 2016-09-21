@@ -160,7 +160,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  background: transparent;
+  background: #fff;
   border-radius: 0.4rem;
   padding: 0.3em 1.5em;
   cursor: pointer;
@@ -278,6 +278,14 @@ input[type="button"]:hover {
   clear: both;
 }
 
+.header-head:before, .header-head:after, .container:before, .container:after {
+  content: " ";
+  display: table;
+}
+.header-head:after, .container:after {
+  clear: both;
+}
+
 .container {
   max-width: 960px;
   padding: 0 1.5rem;
@@ -285,6 +293,15 @@ input[type="button"]:hover {
 }
 
 /*Header */
+.header-collapse {
+  overflow: hidden;
+  height: 0;
+}
+.header-nav-wrap li a {
+  display: block;
+  padding: 1rem;
+}
+
 /*Footer */
 /*Custom */
 /* @keyframes & transitions */

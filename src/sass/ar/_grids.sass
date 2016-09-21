@@ -25,3 +25,8 @@ $gutter: 30
 	max-width: 960px
 	padding: 0 $reg
 	+gvMargin(0 auto)
+	&:before,&:after
+		content: ' '
+		display: table
+	&:after
+		clear: both

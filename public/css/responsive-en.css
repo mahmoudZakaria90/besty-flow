@@ -1,4 +1,15 @@
 /*Exceptions */
+@media(min-width: 768px) {
+  .header-head {
+    display: none;
+  }
+  .header-collapse {
+    height: auto;
+  }
+  .header-nav-wrap > li {
+    float: left;
+  }
+}
 @media(max-width: 1366px);
 /*HD */
 @media(min-width: 1440px);
