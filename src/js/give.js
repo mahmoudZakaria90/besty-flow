@@ -50,7 +50,6 @@ var gv = {
 		var el = document.querySelector(item)
 		var parentEl = el.parentNode
 		var tgt = document.querySelector(target)
-		console.log(parentEl.className)
 		parentEl.insertBefore(el,tgt)
 	}
 }

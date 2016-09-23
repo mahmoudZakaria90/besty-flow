@@ -3,7 +3,7 @@
 //Calling all functions on load events
 window.addEventListener('load',function(){
 	gv.direction();
-	gv.burger()
+	gv.burger();
 })
 
 gv.append('#header-nav .container','<h1>hi</h1>')
