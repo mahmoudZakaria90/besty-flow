@@ -34,17 +34,23 @@ var gv = {
 			}
 		}
 	},
-	addClass(item,className){
-		var el = document.getElementById(item)
+	addClass: function(item,className){
+		var el = document.querySelector(item)
 		el.className += ' ' + className
 	},
-	removeClass(item,className){
-		var el = document.getElementById(item)
+	removeClass: function(item,className){
+		var el = document.querySelector(item)
 		el.classList.remove(className)
 	},
 	append: function(item,txt){
-		var el = document.getElementById(item)
+		var el = document.querySelector(item)
 		el.innerHTML += txt
+	},
+	before: function(item,target){
+		var el = document.querySelector(item)
+		var parentEl = el.parentNode
+		var tgt = document.querySelector(target)
+		console.log(parentEl.className)
+		parentEl.insertBefore(el,tgt)
 	}
 }
-

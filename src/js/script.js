@@ -6,5 +6,6 @@ window.addEventListener('load',function(){
 	gv.burger()
 })
 
-
+gv.append('#header-nav .container','<h1>hi</h1>')
+gv.before('h1','.header-head')
 
