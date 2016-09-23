@@ -1,12 +1,27 @@
 /*Header*/
 .header
-	&-head
 	&-collapse
 		overflow: hidden
 		height: 0
 	&-burger
+		padding: 0 1.5rem
+		background-color: transparent
+		width: 3.2rem
+		height: 3.2rem
+		box-sizing: content-box
+		border-color: blue
+		span
+			display: block
+			margin-bottom: .5rem
+			border: 1px solid
+			border-color: inherit
+			&:last-child
+				margin-bottom: 0
 		&:active
 			top: 0
+		&:hover
+			background-color: transparent
+			border-color: white
 	&-nav-wrap
 		li
 			& a

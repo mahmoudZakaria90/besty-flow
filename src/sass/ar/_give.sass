@@ -332,7 +332,9 @@
 		&-underline
 			text-decoration: none
 
-
+	//transitions
+	&-transition
+		+gvTransitionD()
 	//positions
 	&-relative
 		position: relative
@@ -369,6 +371,7 @@
 		&-grow
 			flex-grow: 1
 			flex-shrink: 0
+			
 		&-row
 			flex-direction: row
 			&-reverse
