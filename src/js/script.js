@@ -1,20 +1,9 @@
-//docDirection
-function docDirection(){
-	var doc = document.documentElement;
-	var docLang = doc.getAttribute('lang')
-	if (docLang == 'en'){
-		doc.setAttribute('dir','ltr')
-	}else{
-		doc.setAttribute('dir','rtl')
-	}
-}
-
+var gv = reqiure('give.js')
 
 
 //Calling all functions on load events
 window.addEventListener('load',function(){
-	docDirection();
+	gv.direction();
+	gv.burger()
 })
 
-
-//Calling all functions on other events

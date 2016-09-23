@@ -40,14 +40,8 @@ var gv = {
 	},
 	removeClass(item,className){
 		var el = document.getElementById(item)
-		el.className += ' ' + className
+		el.classList.remove(className)
 	}
 }
 
-
-//Calling all functions on load events
-window.addEventListener('load',function(){
-	gv.direction();
-	gv.burger()
-})
-
+exports.gv

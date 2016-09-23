@@ -24,15 +24,7 @@
 	
 /*Tablet (portrait) and all mobile Sizes including (phablets) */	
 @media (max-width: 767px)
-	.header
-		&-head
-			display: none
-		&-collapse
-			height: auto
-
-		&-nav-wrap
-			&>li
-				float: left
+	
 
 			
 /*Mobile Landscape to Portrait */
@@ -52,6 +44,17 @@
 /*Tablet portrait to infinite*/
 
 @media (min-width: 768px)
+	.header
+		&-burger
+			display: none
+		&-head
+			height: 0
+		&-collapse
+			height: auto
+
+		&-nav-wrap
+			&>li
+				float: left
 
 
 
