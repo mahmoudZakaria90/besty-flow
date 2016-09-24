@@ -297,6 +297,30 @@ input[type="button"]:hover {
   overflow: hidden;
   height: 0;
 }
+.header-burger {
+  padding: 0 1.5rem;
+  background-color: transparent;
+  width: 3.2rem;
+  height: 3.2rem;
+  box-sizing: content-box;
+  border-color: blue;
+}
+.header-burger span {
+  display: block;
+  margin-bottom: 0.5rem;
+  border: 1px solid;
+  border-color: inherit;
+}
+.header-burger span:last-child {
+  margin-bottom: 0;
+}
+.header-burger:active {
+  top: 0;
+}
+.header-burger:hover {
+  background-color: transparent;
+  border-color: white;
+}
 .header-nav-wrap li a {
   display: block;
   padding: 1rem;
@@ -601,6 +625,9 @@ input[type="button"]:hover {
 .gv-radius-sm {
   border-radius: 0.2rem;
 }
+.gv-circle {
+  border-radius: 50%;
+}
 .gv-float-left {
   float: left;
 }
@@ -704,6 +731,10 @@ input[type="button"]:hover {
 .gv-no-underline {
   text-decoration: none;
 }
+.gv-transition {
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
+}
 .gv-relative {
   position: relative;
 }
@@ -738,7 +769,7 @@ input[type="button"]:hover {
 .gv-flex {
   display: flex;
 }
-.gv-flex > * {
+.gv-flex-grow {
   flex-grow: 1;
   flex-shrink: 0;
 }

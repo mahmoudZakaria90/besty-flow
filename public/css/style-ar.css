@@ -625,6 +625,9 @@ input[type="button"]:hover {
 .gv-radius-sm {
   border-radius: 0.2rem;
 }
+.gv-circle {
+  border-radius: 50%;
+}
 .gv-float-left {
   float: right;
 }
