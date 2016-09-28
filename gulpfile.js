@@ -1,7 +1,7 @@
-var gulp = require('gulp')
-var sass = require('gulp-ruby-sass')
-var connect = require('gulp-connect')
-
+var gulp = require('gulp');
+var sass = require('gulp-ruby-sass');
+var connect = require('gulp-connect');
+var browserify = require('gulp-browserify');
 
 
 
@@ -38,11 +38,14 @@ gulp.task('html', function() {
 
 //js
 gulp.task('js', function() {
-	gulp.src('./src/js/*.js')
-	.pipe(gulp.dest('./public/js'))
-	.pipe(connect.reload());
-
-})
+    // Single entry point to browserify 
+    gulp.src('src/js/script.js')
+        .pipe(browserify({
+          insertGlobals : true
+        }))
+        .pipe(gulp.dest('./public/js'))
+        .pipe(connect.reload())
+});
 
 //connect 
 gulp.task('server',function(){

@@ -53,3 +53,5 @@ var gv = {
 		parentEl.insertBefore(el,tgt)
 	}
 }
+
+module.exports = gv
