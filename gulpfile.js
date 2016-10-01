@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var connect = require('gulp-connect');
-var browserify = require('gulp-browserify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
 
 
 
@@ -25,7 +26,7 @@ gulp.task('watch',function(){
 	gulp.watch('./src/sass/en/*.sass',['sass'])
  	gulp.watch('./src/sass/ar/*.sass',['sass-ar'])
 	gulp.watch('./public/**/*.html',['html'])
-	gulp.watch('./src/js/*.js',['js'])
+	gulp.watch('./src/js/script.js',['browserify'])
 })
 
 
@@ -37,14 +38,14 @@ gulp.task('html', function() {
 })
 
 //js
-gulp.task('js', function() {
-    // Single entry point to browserify 
-    gulp.src('src/js/script.js')
-        .pipe(browserify({
-          insertGlobals : true
-        }))
-        .pipe(gulp.dest('./public/js'))
-        .pipe(connect.reload())
+gulp.task('browserify', function() {
+    return browserify('./src/js/script.js')
+        .bundle()
+        //Pass desired output filename to vinyl-source-stream
+        .pipe(source('script.js'))
+        // Start piping stream to tasks!
+        .pipe(gulp.dest('./public/js/'))
+        .pipe(connect.reload());
 });
 
 //connect 
@@ -56,4 +57,4 @@ gulp.task('server',function(){
 })
 
 //default
-gulp.task('default',['watch','server'])
+gulp.task('default',['watch','server','browserify'])
