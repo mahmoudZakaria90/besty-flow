@@ -48,6 +48,8 @@ var gv = {
 		var sliderNextWrap = []
 		var sliderPrevWrap = []
 
+		var sliderIndex = 0
+
 		//instructions
 
 		//NextSlider
@@ -60,46 +62,41 @@ var gv = {
 			sliderPrevWrap.push(sliderPrev[i])
 		}
 
-		sliderNextWrap.forEach(this.sliderNextEach)
-		sliderPrevWrap.forEach(this.sliderPrevEach)
+		sliderNextWrap.forEach(function(item){
+			var parent = item.parentNode
+			var sibling = parent.nextElementSibling
+			var slides = document.getElementsByClassName('slider-slide')
 
-	},
+			item.addEventListener('click',function(){
+				if(sliderIndex === slides.length - 1){
+					sliderIndex = 0
+					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+				}else{
+					sliderIndex ++
+					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+				}
 
-	sliderIndex: 0,
-
-	sliderNextEach: function(item){
-		var parent = item.parentNode
-		var sibling = parent.nextElementSibling
-		var slides = document.getElementsByClassName('slider-slide')
-
-		item.addEventListener('click',function(){
-			if(gv.sliderIndex === slides.length - 1){
-				gv.sliderIndex = 0
-				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
-			}else{
-				gv.sliderIndex ++
-				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
-			}
-
+			})
+				
 		})
-			
-	},
+		sliderPrevWrap.forEach(function(item){
+			var parent = item.parentNode
+			var sibling = parent.nextElementSibling
+			var slides = document.getElementsByClassName('slider-slide')
 
-	sliderPrevEach: function(item){
-		var parent = item.parentNode
-		var sibling = parent.nextElementSibling
-		var slides = document.getElementsByClassName('slider-slide')
-
-		item.addEventListener('click',function(){
-			if(gv.sliderIndex === 0){
-				gv.sliderIndex = slides.length - 1
-				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
-			}else{
-				gv.sliderIndex --
-				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
-			}
+			item.addEventListener('click',function(){
+				if(sliderIndex === 0){
+					sliderIndex = slides.length - 1
+					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+				}else{
+					sliderIndex --
+					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+				}
+			})
 		})
+
 	},
+
 	//Dom Manipulation
 	addClass: function(item,className){
 		var el = document.querySelector(item)
