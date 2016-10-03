@@ -20,7 +20,7 @@ var gv = {
 		triggerWrap.forEach(this.burgrEach)
 
 	},
-	burgrEach: function(item,index,arr){
+	burgrEach: function(item){
 		var parentTrigger = item.parentNode;
 		var NextOfTrigger = parentTrigger.nextElementSibling;
 		var state = false
@@ -40,9 +40,65 @@ var gv = {
 
 	//slider
 	sliderInit: function(){
+		//ingradients
+		var sliderNext = document.getElementsByClassName('slider-next')
+		var sliderPrev = document.getElementsByClassName('slider-prev')
 		
+		var sliderNextWrap = []
+		var sliderPrevWrap = []
+
+		//instructions
+
+		//NextSlider
+		for(var i = 0; i < sliderNext.length; i++){
+			sliderNextWrap.push(sliderNext[i])
+		}
+
+		//PrevSlider
+		for(var i = 0; i < sliderPrev.length; i++){
+			sliderPrevWrap.push(sliderPrev[i])
+		}
+
+		sliderNextWrap.forEach(this.sliderNextEach)
+		sliderPrevWrap.forEach(this.sliderPrevEach)
+
 	},
 
+	sliderIndex: 0,
+
+	sliderNextEach: function(item){
+		var parent = item.parentNode
+		var sibling = parent.nextElementSibling
+		var slides = document.getElementsByClassName('slider-slide')
+
+		item.addEventListener('click',function(){
+			if(gv.sliderIndex === slides.length - 1){
+				gv.sliderIndex = 0
+				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
+			}else{
+				gv.sliderIndex ++
+				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
+			}
+
+		})
+			
+	},
+
+	sliderPrevEach: function(item){
+		var parent = item.parentNode
+		var sibling = parent.nextElementSibling
+		var slides = document.getElementsByClassName('slider-slide')
+
+		item.addEventListener('click',function(){
+			if(gv.sliderIndex === 0){
+				gv.sliderIndex = slides.length - 1
+				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
+			}else{
+				gv.sliderIndex --
+				sibling.style.left = '-' + (gv.sliderIndex * 100) + '%'
+			}
+		})
+	},
 	//Dom Manipulation
 	addClass: function(item,className){
 		var el = document.querySelector(item)

@@ -160,11 +160,11 @@ input, button {
 .slider {
   position: relative;
   overflow: hidden;
-  width: 50rem;
-  margin: auto;
 }
 .slider-inner {
   display: flex;
+  position: relative;
+  left: 0;
   -webkit-transition: all 450ms;
   transition: all 450ms;
 }

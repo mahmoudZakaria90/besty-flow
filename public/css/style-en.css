@@ -160,11 +160,11 @@ input, button {
 .slider {
   position: relative;
   overflow: hidden;
-  width: 50rem;
-  margin: auto;
 }
 .slider-inner {
   display: flex;
+  position: relative;
+  left: 0;
   -webkit-transition: all 450ms;
   transition: all 450ms;
 }
@@ -190,6 +190,7 @@ input, button {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  color: white !important;
 }
 .slider-next {
   right: 0;

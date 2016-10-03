@@ -7,9 +7,7 @@ var gv = require("./give.js")
 window.addEventListener('load',function(){
 	gv.direction();
 	gv.burger();
+	gv.sliderInit();
 })
 
-
-gv.create('h1','.header-nav')
-gv.append('h1','header')
 
