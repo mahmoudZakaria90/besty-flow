@@ -38,6 +38,11 @@ var gv = {
 		}
 	},
 
+	//slider
+	sliderInit: function(){
+		
+	},
+
 	//Dom Manipulation
 	addClass: function(item,className){
 		var el = document.querySelector(item)
