@@ -160,7 +160,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  background: #fff;
+  background-color: #fff;
   border-radius: 0.4rem;
   padding: 0.3em 1.5em;
   cursor: pointer;
@@ -730,6 +730,15 @@ input[type="button"]:hover {
 }
 .gv-no-underline {
   text-decoration: none;
+}
+.gv-no-btn {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+.gv-no-btn:hover {
+  background-color: transparent;
+  color: initial;
 }
 .gv-transition {
   -webkit-transition: all 450ms;

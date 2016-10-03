@@ -9,14 +9,15 @@ var gv = {
 			doc.setAttribute('dir','rtl')
 		}
 	},
+	//burger
 	burger: function(){
 		var trigger = document.getElementsByClassName('header-burger');
-		var pushed = [];
+		var triggerWrap = [];
 
 		for (var i = 0; i < trigger.length; i++) {
-			pushed.push(trigger[i])
+			triggerWrap.push(trigger[i])
 		}
-		pushed.forEach(this.burgrEach)
+		triggerWrap.forEach(this.burgrEach)
 
 	},
 	burgrEach: function(item,index,arr){
@@ -24,16 +25,20 @@ var gv = {
 		var NextOfTrigger = parentTrigger.nextElementSibling;
 		var state = false
 		item.onclick = function(){
-			parentTrigger.className += ' ' + 'active'
+			
 			if(!state){
 				state = true;
 				NextOfTrigger.style.height = NextOfTrigger.scrollHeight + 'px';
+				parentTrigger.classList.add('active')
 			}else{
 				state = false;
 				NextOfTrigger.style.height = 0 + 'px'
+				parentTrigger.classList.remove('active')
 			}
 		}
 	},
+
+	//Dom Manipulation
 	addClass: function(item,className){
 		var el = document.querySelector(item)
 		el.className += ' ' + className
@@ -51,6 +56,11 @@ var gv = {
 		var parentEl = el.parentNode
 		var tgt = document.querySelector(target)
 		parentEl.insertBefore(el,tgt)
+	},
+	create: function(item,parent){
+		var parentEl = document.querySelector(parent)
+		var newEl = document.createElement(item)
+		parentEl.appendChild(newEl)
 	}
 }
 

@@ -9,8 +9,7 @@ window.addEventListener('load',function(){
 	gv.burger();
 })
 
-gv.append('#header-nav .container','<h1>hi</h1>')
-gv.before('h1','.header-head')
-gv.addClass('h1','active')
-gv.addClass('h1','active3')
-gv.addClass('h1','active7')
+
+gv.create('h1','.header-nav')
+gv.append('h1','header')
+
