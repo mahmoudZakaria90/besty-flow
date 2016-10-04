@@ -47,50 +47,51 @@ var gv = {
 		
 		var sliderNextWrap = []
 		var sliderPrevWrap = []
-
-		var sliderIndex = 0
-
+		var sliderIndexWrap = []
+		
 		//instructions
 
 		//NextSlider
 		for(var i = 0; i < sliderNext.length; i++){
 			sliderNextWrap.push(sliderNext[i])
+			sliderIndexWrap.push(0)
 		}
 
 		//PrevSlider
 		for(var i = 0; i < sliderPrev.length; i++){
 			sliderPrevWrap.push(sliderPrev[i])
+			sliderIndexWrap.push(0)
 		}
 
-		sliderNextWrap.forEach(function(item){
+		sliderNextWrap.forEach(function(item,index,array){
 			var parent = item.parentNode
 			var sibling = parent.nextElementSibling
-			var slides = document.getElementsByClassName('slider-slide')
+			var slides = parent.nextElementSibling.children
 
 			item.addEventListener('click',function(){
-				if(sliderIndex === slides.length - 1){
-					sliderIndex = 0
-					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+				if(sliderIndexWrap[index] === slides.length - 1){
+					sliderIndexWrap[index] = 0
+					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
 				}else{
-					sliderIndex ++
-					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+					sliderIndexWrap[index] ++
+					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
 				}
 
 			})
 				
 		})
-		sliderPrevWrap.forEach(function(item){
+		sliderPrevWrap.forEach(function(item,index,array){
 			var parent = item.parentNode
 			var sibling = parent.nextElementSibling
-			var slides = document.getElementsByClassName('slider-slide')
+			var slides = parent.nextElementSibling.children
 
 			item.addEventListener('click',function(){
-				if(sliderIndex === 0){
-					sliderIndex = slides.length - 1
-					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+				if(sliderIndexWrap[index] === 0){
+					sliderIndexWrap[index] = slides.length - 1
+					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
 				}else{
-					sliderIndex --
-					sibling.style.left = '-' + (sliderIndex * 100) + '%'
+					sliderIndexWrap[index] --
+					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
 				}
 			})
 		})
