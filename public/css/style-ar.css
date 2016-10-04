@@ -156,6 +156,7 @@ input, button {
 .slider {
   position: relative;
   overflow: hidden;
+  direction: ltr;
 }
 .slider-inner {
   display: flex;
@@ -180,14 +181,17 @@ input, button {
 }
 .slider-control {
   position: absolute;
+  left: 0;
   width: 8%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
+  color: white !important;
 }
 .slider-next {
+  left: auto;
   right: 0;
 }
 
@@ -788,6 +792,16 @@ input[type="button"]:hover {
 }
 .gv-no-underline {
   text-decoration: none;
+}
+.gv-no-btn {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+.gv-no-btn:hover {
+  background-color: transparent;
+  color: initial;
+  top: 0;
 }
 .gv-transition {
   -webkit-transition: all 450ms;

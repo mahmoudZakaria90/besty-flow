@@ -2,6 +2,7 @@
 .slider
 	position: relative
 	overflow: hidden
+	direction: ltr
 	&-inner
 		display: flex
 		position: relative
@@ -20,11 +21,14 @@
 
 	&-control
 		position: absolute
+		left: 0
 		width: 8%
 		height: 100%
 		display: flex
 		justify-content: center
 		align-items: center
 		z-index: 10
+		color: white!important
 	&-next
+		left: auto
 		right: 0

@@ -180,6 +180,7 @@ input, button {
 }
 .slider-control {
   position: absolute;
+  left: 0;
   width: 8%;
   height: 100%;
   display: flex;
@@ -190,6 +191,7 @@ input, button {
 }
 .slider-next {
   right: 0;
+  left: auto;
 }
 
 button,
