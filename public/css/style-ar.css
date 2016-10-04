@@ -329,8 +329,9 @@ input[type="button"]:hover {
 
 /*Header */
 .header-collapse {
-  overflow: hidden;
   height: 0;
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
 }
 .header-burger {
   padding: 0 1.5rem;
