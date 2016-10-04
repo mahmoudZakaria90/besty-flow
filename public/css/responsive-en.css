@@ -18,10 +18,25 @@
     height: 0;
   }
   .header-collapse {
-    height: auto;
+    height: auto !important;
+    overflow: visible;
   }
   .header-nav-wrap > li {
     float: left;
+  }
+  .header-dropdown-menu {
+    background-color: #1a1a1a;
+    min-width: 160px;
+    border-radius: 4px;
+    box-shadow: 0 1px 5px #191919;
+    position: absolute;
+    left: 0;
+    padding: 0.5rem;
+    z-index: 10;
+  }
+  .header-dropdown-menu > li > a:hover {
+    background-color: #fff;
+    color: #1a1a1a;
   }
 }
 /*Mobile landscape  to infinite */

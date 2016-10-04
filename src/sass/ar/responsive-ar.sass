@@ -1,18 +1,10 @@
+@import vars
 @import responsive
 /*Exceptions*/
+@media(max-width: 1366px)
 
-@media(min-width: #{$tablet-portrait})
-	.header
-		&-head
-			display: none
-		&-collapse
-			height: auto
+@media (max-width: 1355px)
 
-		&-nav-wrap
-			&>li
-				float: left
-
-@media(max-width: 1366px)	
 
 /*HD*/
 @media(min-width: 1440px)
@@ -25,14 +17,10 @@
 
 
 @media (min-width: 1200px)
-
-@media(max-width: 1366px)
 	
 
-@media (max-width: 1355px)
-
 	
-/*Med Desktop ,tablets and all mobile Sizes including (phablets) */
+/*Small, Med Desktops ,tablets and all mobile Sizes including (phablets) */
 @media (max-width: 991px)
 	
 /*Tablet (portrait) and all mobile Sizes including (phablets) */	
@@ -49,23 +37,51 @@
 	
 
 
-/*Med Desktop To infinite*/
+/*Small, Med Desktops, tablets landscape To infinite*/
 @media (min-width: 992px)
 
 
 
-/*Tablet  to infinite*/
+/*Tablet portrait to infinite*/
 
 @media (min-width: 768px)
+	.header
+		&-burger
+			display: none
+		&-head
+			height: 0
+		&-collapse
+			height: auto!important
+			overflow: visible
+
+		&-nav
+			&-wrap
+				&>li
+					float: left
+		&-dropdown
+			&-menu
+				background-color: $main-color
+				min-width: 160px
+				border-radius: 4px
+				box-shadow: 0 1px 5px darken($main-color,.5)
+				position: absolute
+				left: 0
+				padding: .5rem
+				z-index: 10
+				& > li
+					& > a
+						&:hover
+							background-color: $third-color
+							color: $main-color
 
 
 
-/*Mobile  to infinite*/
+/*Mobile landscape  to infinite*/
 @media (min-width: 480px)
 
 
 
-/*Mobile  to infinite*/
+/*Mobile portrait  to infinite*/
 
 @media (min-width: 320px)
 

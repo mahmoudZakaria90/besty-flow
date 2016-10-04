@@ -1,8 +1,4 @@
 /*@font-face */
-@font-face {
-  font-family: "open-sans";
-  src: url(fonts/OpenSans-Regular.tff) format("truetype");
-}
 /*General */
 /*============ */
 * {
@@ -334,8 +330,9 @@ input[type="button"]:hover {
 
 /*Header */
 .header-collapse {
-  overflow: hidden;
   height: 0;
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
 }
 .header-burger {
   padding: 0 1.5rem;
@@ -361,9 +358,31 @@ input[type="button"]:hover {
   background-color: transparent;
   border-color: white;
 }
-.header-nav-wrap li a {
+.header-nav-wrap li {
+  list-style-type: none;
+}
+.header-nav-wrap li > a {
   display: block;
   padding: 1rem;
+}
+.header-nav-wrap li a {
+  text-decoration: none;
+  color: #fff;
+}
+.header-nav-wrap .fa {
+  font-size: 1.4rem;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+.header-dropdown {
+  position: relative;
+}
+.header-dropdown.active .header-dropdown-menu {
+  display: block;
+}
+.header-dropdown-menu {
+  display: none;
+  padding-left: 1.5rem;
 }
 
 /*Footer */

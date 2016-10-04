@@ -8,6 +8,7 @@ window.addEventListener('load',function(){
 	gv.direction();
 	gv.burger();
 	gv.sliderInit();
+	gv.dropdown('click');
 })
 
 

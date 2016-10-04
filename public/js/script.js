@@ -14,31 +14,30 @@ var gv = {
 	burger: function(){
 		var trigger = document.getElementsByClassName('header-burger');
 		var triggerWrap = [];
-
+		
 		for (var i = 0; i < trigger.length; i++) {
 			triggerWrap.push(trigger[i])
 		}
-		triggerWrap.forEach(this.burgrEach)
 
-	},
-	burgrEach: function(item){
-		var parentTrigger = item.parentNode;
-		var NextOfTrigger = parentTrigger.nextElementSibling;
-		var state = false
-		item.onclick = function(){
-			
-			if(!state){
-				state = true;
-				NextOfTrigger.style.height = NextOfTrigger.scrollHeight + 'px';
-				parentTrigger.classList.add('active')
-			}else{
-				state = false;
-				NextOfTrigger.style.height = 0 + 'px'
-				parentTrigger.classList.remove('active')
+		triggerWrap.forEach(function(item){
+			var parentTrigger = item.parentNode;
+			var NextOfTrigger = parentTrigger.nextElementSibling;
+			var state = false
+			item.onclick = function(){
+				
+				if(!state){
+					state = true;
+					NextOfTrigger.style.height = NextOfTrigger.scrollHeight + 'px';
+					parentTrigger.classList.add('active')
+				}else{
+					state = false;
+					NextOfTrigger.style.height = 0 + 'px'
+					parentTrigger.classList.remove('active')
+				}
 			}
-		}
+		})
 	},
-
+	
 	//slider
 	sliderInit: function(){
 		//ingradients
@@ -98,6 +97,28 @@ var gv = {
 
 	},
 
+	dropdown: function(type){
+		var trigger = document.getElementsByClassName('header-dropdown');
+		var triggerWrap = [];
+
+		for (var i = 0; i < trigger.length; i++) {
+			triggerWrap.push(trigger[i])
+		}
+		triggerWrap.forEach(function(item){
+			item.children[0].addEventListener(type,function(e){
+				e.preventDefault()
+				item.classList.toggle('active')
+				item.parentNode.parentNode.style.height = 'auto'
+			},false)
+
+			if(window.innerWidth >= 768){
+				document.body.addEventListener(type,function(){
+						item.classList.remove('active')
+				},true)
+			}
+		})
+	},
+
 	//Dom Manipulation
 	addClass: function(item,className){
 		var el = document.querySelector(item)
@@ -136,6 +157,7 @@ window.addEventListener('load',function(){
 	gv.direction();
 	gv.burger();
 	gv.sliderInit();
+	gv.dropdown('click');
 })
 
 
