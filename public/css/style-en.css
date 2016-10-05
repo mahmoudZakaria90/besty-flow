@@ -199,7 +199,7 @@ input, button {
 .slider-indicator {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
+  border-right: 5px solid orange;
   background-color: black;
 }
 
