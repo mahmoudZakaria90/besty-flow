@@ -168,6 +168,9 @@ input, button {
   flex: 1 0 100%;
   height: 50rem;
   background-color: lightblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 .slider-slide:nth-child(2) {
   background-color: lightgreen;
@@ -330,6 +333,7 @@ input[type="button"]:hover {
   margin: 0 auto;
 }
 
+/*Header */
 /*Header */
 .header-collapse {
   height: 0;
@@ -844,11 +848,11 @@ input[type="button"]:hover {
   flex-grow: 1;
   flex-shrink: 0;
 }
-.gv-flex-row {
-  flex-direction: row;
-}
 .gv-flex-row-reverse {
   flex-direction: row-reverse;
+}
+.gv-flex-column {
+  flex-direction: column;
 }
 .gv-flex-column-reverse {
   flex-direction: column-reverse;
