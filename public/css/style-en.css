@@ -196,6 +196,12 @@ input, button {
   right: 0;
   left: auto;
 }
+.slider-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
 
 button,
 input[type="submit"],
@@ -333,7 +339,6 @@ input[type="button"]:hover {
   margin: 0 auto;
 }
 
-/*Header */
 /*Header */
 .header-collapse {
   height: 0;

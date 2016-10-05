@@ -42,10 +42,12 @@ var gv = {
 		//ingradients
 		var sliderNext = document.getElementsByClassName('slider-next');
 		var sliderPrev = document.getElementsByClassName('slider-prev');
+		var sliderIndicators = document.getElementsByClassName('slider-indicator');
 		
 		var sliderNextWrap = [];
 		var sliderPrevWrap = [];
 		var sliderIndexWrap = [];
+		var sliderIndicatorsWrap = [];
 		
 		//instructions
 
@@ -59,6 +61,12 @@ var gv = {
 		for(var i = 0; i < sliderPrev.length; i++){
 			sliderPrevWrap.push(sliderPrev[i]);
 			sliderIndexWrap.push(0);
+		}
+
+		//Indicators
+		for(var i = 0; i < sliderIndicators.length; i++){
+			sliderIndicatorsWrap.push(sliderIndicators[i]);
+			
 		}
 
 		sliderNextWrap.forEach(function(item,index,array){
@@ -92,6 +100,10 @@ var gv = {
 					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
 				}
 			})
+		})
+
+		sliderIndicatorsWrap.forEach(function(item,index,array){
+			
 		})
 
 	},
