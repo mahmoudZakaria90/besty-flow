@@ -43,12 +43,12 @@ var gv = {
 		//ingradients
 		var sliderNext = document.getElementsByClassName('slider-next');
 		var sliderPrev = document.getElementsByClassName('slider-prev');
-		var sliderIndicators = document.getElementsByClassName('slider-indicator');
+		
 		
 		var sliderNextWrap = [];
 		var sliderPrevWrap = [];
 		var sliderIndexWrap = [];
-		var sliderIndicatorsWrap = [];
+	
 		
 		//instructions
 
@@ -64,12 +64,7 @@ var gv = {
 			sliderIndexWrap.push(0);
 		}
 
-		//Indicators
-		for(var i = 0; i < sliderIndicators.length; i++){
-			sliderIndicatorsWrap.push(sliderIndicators[i]);
-			sliderIndexWrap.push(0);
-			
-		}
+		
 
 		sliderNextWrap.forEach(function(item,index,array){
 			var parent = item.parentNode;
@@ -80,37 +75,15 @@ var gv = {
 				if(sliderIndexWrap[index] === slides.length - 1){
 					sliderIndexWrap[index] = 0
 					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						sliderIndicatorsWrap[i].classList.remove('active')
-					}
-	
-					sliderIndicatorsWrap[0].classList.add('active')
 				}else{
 					sliderIndexWrap[index] ++
 					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						sliderIndicatorsWrap[i].classList.remove('active')
-					}
-					
-					sliderIndicatorsWrap[sliderIndexWrap[index]].classList.add('active')
 				}
 
 			})
-
-			sliderIndicatorsWrap.forEach(function(item,index,array){
-				var parent = item.parentNode
-				var sibling = parent.nextElementSibling.nextElementSibling
-				item.addEventListener('click',function(){
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						array[i].classList.remove('active')
-					}
-					this.classList.add('active')
-					sibling.style.left = '-' + (sliderIndexWrap[index] + index * 100) + '%';
-				})
-			})
-
 				
 		})
+
 		sliderPrevWrap.forEach(function(item,index,array){
 			var parent = item.parentNode
 			var sibling = parent.nextElementSibling
@@ -120,33 +93,14 @@ var gv = {
 				if(sliderIndexWrap[index] === 0){
 					sliderIndexWrap[index] = slides.length - 1;
 					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						sliderIndicatorsWrap[i].classList.remove('active')
-					}
-	
-					sliderIndicatorsWrap[sliderIndicatorsWrap.length - 1].classList.add('active')
+					
 				}else{
 					sliderIndexWrap[index] --;
 					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						sliderIndicatorsWrap[i].classList.remove('active')
-					}
-	
-					sliderIndicatorsWrap[sliderIndexWrap[index]].classList.add('active')
+			
 				}
 			})
-			sliderIndicatorsWrap.forEach(function(item,index,array){
-				var parent = item.parentNode
-				var sibling = parent.nextElementSibling.nextElementSibling
-
-				item.addEventListener('click',function(){
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						array[i].classList.remove('active')
-					}
-					this.classList.add('active')
-					sibling.style.left = '-' + (sliderIndexWrap[index] + index * 100) + '%';
-				})
-			})
+			
 		})
 
 		
