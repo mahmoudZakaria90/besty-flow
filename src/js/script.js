@@ -1,6 +1,6 @@
 //Custom .js
 
-var gv = require("./give.js")
+var gv = require("./give.js");
 
 
 //Calling all functions on load events

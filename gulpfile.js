@@ -3,7 +3,8 @@ var sass = require('gulp-ruby-sass');
 var connect = require('gulp-connect');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-
+var jshint = require('gulp-jshint');
+var notificator = require('gulp-jshint-notify-reporter');
 
 
 //sass
@@ -27,6 +28,7 @@ gulp.task('watch',function(){
  	gulp.watch('./src/sass/ar/*.sass',['sass-ar'])
 	gulp.watch('./public/**/*.html',['html'])
 	gulp.watch('./src/js/script.js',['browserify'])
+    gulp.watch('./src/js/**.js',['lint'])
 })
 
 
@@ -46,6 +48,12 @@ gulp.task('browserify', function() {
         // Start piping stream to tasks!
         .pipe(gulp.dest('./public/js/'))
         .pipe(connect.reload());
+});
+
+gulp.task('lint', function() {
+  return gulp.src('./src/js/*.js')
+    .pipe(jshint())
+    .pipe(notificator())
 });
 
 //connect 

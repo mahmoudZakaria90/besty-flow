@@ -2,11 +2,11 @@
 var gv = {
 	direction: function(){
 	var doc = document.documentElement;
-		var docLang = doc.getAttribute('lang')
+		var docLang = doc.getAttribute('lang');
 		if (docLang == 'en'){
-			doc.setAttribute('dir','ltr')
+			doc.setAttribute('dir','ltr');
 		}else{
-			doc.setAttribute('dir','rtl')
+			doc.setAttribute('dir','rtl');
 		}
 	},
 	//burger
@@ -15,23 +15,23 @@ var gv = {
 		var triggerWrap = [];
 		
 		for (var i = 0; i < trigger.length; i++) {
-			triggerWrap.push(trigger[i])
+			triggerWrap.push(trigger[i]);
 		}
 
 		triggerWrap.forEach(function(item){
 			var parentTrigger = item.parentNode;
 			var NextOfTrigger = parentTrigger.nextElementSibling;
-			var state = false
+			var state = false;
 			item.onclick = function(){
 				
 				if(!state){
 					state = true;
 					NextOfTrigger.style.height = NextOfTrigger.scrollHeight + 'px';
-					parentTrigger.classList.add('active')
+					parentTrigger.classList.add('active');
 				}else{
 					state = false;
-					NextOfTrigger.style.height = 0 + 'px'
-					parentTrigger.classList.remove('active')
+					NextOfTrigger.style.height = 0 + 'px';
+					parentTrigger.classList.remove('active');
 				}
 			}
 		})
@@ -40,39 +40,39 @@ var gv = {
 	//slider
 	sliderInit: function(){
 		//ingradients
-		var sliderNext = document.getElementsByClassName('slider-next')
-		var sliderPrev = document.getElementsByClassName('slider-prev')
+		var sliderNext = document.getElementsByClassName('slider-next');
+		var sliderPrev = document.getElementsByClassName('slider-prev');
 		
-		var sliderNextWrap = []
-		var sliderPrevWrap = []
-		var sliderIndexWrap = []
+		var sliderNextWrap = [];
+		var sliderPrevWrap = [];
+		var sliderIndexWrap = [];
 		
 		//instructions
 
 		//NextSlider
 		for(var i = 0; i < sliderNext.length; i++){
-			sliderNextWrap.push(sliderNext[i])
-			sliderIndexWrap.push(0)
+			sliderNextWrap.push(sliderNext[i]);
+			sliderIndexWrap.push(0);
 		}
 
 		//PrevSlider
 		for(var i = 0; i < sliderPrev.length; i++){
-			sliderPrevWrap.push(sliderPrev[i])
-			sliderIndexWrap.push(0)
+			sliderPrevWrap.push(sliderPrev[i]);
+			sliderIndexWrap.push(0);
 		}
 
 		sliderNextWrap.forEach(function(item,index,array){
-			var parent = item.parentNode
-			var sibling = parent.nextElementSibling
-			var slides = parent.nextElementSibling.children
+			var parent = item.parentNode;
+			var sibling = parent.nextElementSibling;
+			var slides = parent.nextElementSibling.children;
 
 			item.addEventListener('click',function(){
 				if(sliderIndexWrap[index] === slides.length - 1){
 					sliderIndexWrap[index] = 0
-					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
+					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
 				}else{
 					sliderIndexWrap[index] ++
-					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
+					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
 				}
 
 			})
@@ -85,11 +85,11 @@ var gv = {
 
 			item.addEventListener('click',function(){
 				if(sliderIndexWrap[index] === 0){
-					sliderIndexWrap[index] = slides.length - 1
+					sliderIndexWrap[index] = slides.length - 1;
 					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
 				}else{
-					sliderIndexWrap[index] --
-					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%'
+					sliderIndexWrap[index] --;
+					sibling.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
 				}
 			})
 		})
@@ -101,18 +101,18 @@ var gv = {
 		var triggerWrap = [];
 
 		for (var i = 0; i < trigger.length; i++) {
-			triggerWrap.push(trigger[i])
+			triggerWrap.push(trigger[i]);
 		}
 		triggerWrap.forEach(function(item){
 			item.children[0].addEventListener(type,function(e){
-				e.preventDefault()
-				item.classList.toggle('active')
-				item.parentNode.parentNode.style.height = 'auto'
+				e.preventDefault();
+				item.classList.toggle('active');
+				item.parentNode.parentNode.style.height = 'auto';
 			},false)
 
 			if(window.innerWidth >= 768){
 				document.body.addEventListener(type,function(){
-						item.classList.remove('active')
+						item.classList.remove('active');
 				},true)
 			}
 		})
@@ -120,27 +120,27 @@ var gv = {
 
 	//Dom Manipulation
 	addClass: function(item,className){
-		var el = document.querySelector(item)
-		el.className += ' ' + className
+		var el = document.querySelector(item);
+		el.className += ' ' + className;
 	},
 	removeClass: function(item,className){
-		var el = document.querySelector(item)
-		el.classList.remove(className)
+		var el = document.querySelector(item);
+		el.classList.remove(className);
 	},
 	append: function(item,txt){
-		var el = document.querySelector(item)
-		el.innerHTML += txt
+		var el = document.querySelector(item);
+		el.innerHTML += txt;
 	},
 	before: function(item,target){
-		var el = document.querySelector(item)
-		var parentEl = el.parentNode
-		var tgt = document.querySelector(target)
-		parentEl.insertBefore(el,tgt)
+		var el = document.querySelector(item);
+		var parentEl = el.parentNode;
+		var tgt = document.querySelector(target);
+		parentEl.insertBefore(el,tgt);
 	},
 	create: function(item,parent){
-		var parentEl = document.querySelector(parent)
-		var newEl = document.createElement(item)
-		parentEl.appendChild(newEl)
+		var parentEl = document.querySelector(parent);
+		var newEl = document.createElement(item);
+		parentEl.appendChild(newEl);
 	}
 }
 
