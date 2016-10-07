@@ -35,3 +35,18 @@
 	&-next
 		left: auto
 		right: 0
+
+	&-indicator
+		&-wrap
+			+gvPosition(absolute, auto 0 1rem 0)
+			z-index: 10
+			text-align: center
+		+gvSize(10px,10px)
+		+gvBorder(-radius,50%)
+		background-color: $second-color
+		display: inline-block
+		cursor: pointer
+		margin: 0 1rem
+		&.active
+			cursor: default
+			background-color: $main-color
