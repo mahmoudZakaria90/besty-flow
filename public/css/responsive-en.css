@@ -38,6 +38,13 @@
     background-color: #fff;
     color: #1a1a1a;
   }
+
+  .slider-indicator-wrap {
+    display: none;
+  }
+  .slider-control-wrap {
+    display: block;
+  }
 }
 /*Mobile landscape  to infinite */
 /*Mobile portrait  to infinite */
