@@ -134,15 +134,19 @@ var gv = {
 		triggerWrap.forEach(function(item){
 			item.children[0].addEventListener(type,function(e){
 				e.preventDefault();
-				item.classList.toggle('active');
-				item.parentNode.parentNode.style.height = 'auto';
+				if(item.className == "header-dropdown"){
+					item.classList.add('active');
+				}else if (item.className == "header-dropdown active"){
+					item.classList.remove('active');
+				}
+				item.parentNode.parentNode.style.height = 'auto';// for responsive
 			},false)
 
-			if(window.innerWidth >= 768){
+			
 				document.body.addEventListener(type,function(){
 						item.classList.remove('active');
 				},true)
-			}
+			
 		})
 	},
 
