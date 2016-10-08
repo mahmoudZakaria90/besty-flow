@@ -39,7 +39,7 @@ I used gulp and bower for my dependencies and devDependencies :
 - `npm install`
 - `bower update`
 
-#### for quick use
+#### For quick use
 `<link href="css/style-en.css" rel="stylesheet">`
 
 <h1 id="sliders">Slider structure</h1>
