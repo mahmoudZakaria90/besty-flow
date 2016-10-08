@@ -68,6 +68,7 @@ I used gulp and bower for my dependencies and devDependencies :
 </div>
 
 ```
+#### Note: this version is under maintenance but work properly.
 
 #Dropdown
 ```
@@ -123,3 +124,4 @@ I used gulp and bower for my dependencies and devDependencies :
   </div>         
 
 ```
+#### Note: this version is under maintenance but work properly.
