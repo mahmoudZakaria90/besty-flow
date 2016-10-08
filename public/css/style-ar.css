@@ -193,9 +193,6 @@ input, button {
   z-index: 10;
   color: white !important;
 }
-.slider-control-wrap {
-  display: none;
-}
 .slider-next {
   left: auto;
   right: 0;

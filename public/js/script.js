@@ -43,7 +43,7 @@ var gv = {
 		//ingradients
 		var sliderNext = document.getElementsByClassName('slider-next');
 		var sliderPrev = document.getElementsByClassName('slider-prev');
-		var sliderIndicators = document.getElementsByClassName('slider-indicator');
+		var sliderIndicators = document.getElementsByClassName('slider-indicator-wrap');
 		
 		var sliderNextWrap = [];
 		var sliderPrevWrap = [];
@@ -110,18 +110,15 @@ var gv = {
 		})
 
 		sliderIndicatorsWrap.forEach(function(item,index,array){
-				var parent = item.parentNode
-				var sibling = parent.nextElementSibling.nextElementSibling
-
-				item.addEventListener('click',function(){
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						array[i].classList.remove('active')
-					}
-					item.classList.add('active')
-					sibling.style.left = '-' + (index * 100) + '%';
+				var childs = item.children
+				var sibling = item.nextElementSibling
+				childs.forEach(function(item){
+					item.addEventListener('click',function(){
+					alert('test')
 				})
 			})
-
+				
+		})
 	},
 
 	dropdown: function(type){

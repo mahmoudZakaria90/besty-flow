@@ -42,12 +42,12 @@ var gv = {
 		//ingradients
 		var sliderNext = document.getElementsByClassName('slider-next');
 		var sliderPrev = document.getElementsByClassName('slider-prev');
-		var sliderIndicators = document.getElementsByClassName('slider-indicator');
+	
 		
 		var sliderNextWrap = [];
 		var sliderPrevWrap = [];
 		var sliderIndexWrap = [];
-		var sliderIndicatorsWrap = [];
+		
 	
 		
 		//instructions
@@ -64,12 +64,7 @@ var gv = {
 			sliderIndexWrap.push(0);
 		}
 
-		//Indicators
-		for(var i = 0; i < sliderIndicators.length; i++){
-			sliderIndicatorsWrap.push(sliderIndicators[i]);
-			sliderIndexWrap.push(0);
-			
-		}
+		
 
 		sliderNextWrap.forEach(function(item,index,array){
 			var parent = item.parentNode;
@@ -108,19 +103,7 @@ var gv = {
 			
 		})
 
-		sliderIndicatorsWrap.forEach(function(item,index,array){
-				var parent = item.parentNode
-				var sibling = parent.nextElementSibling.nextElementSibling
-
-				item.addEventListener('click',function(){
-					for(var i = 0; i < sliderIndicatorsWrap.length; i++){
-						array[i].classList.remove('active')
-					}
-					item.classList.add('active')
-					sibling.style.left = '-' + (index * 100) + '%';
-				})
-			})
-
+		
 	},
 
 	dropdown: function(type){

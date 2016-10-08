@@ -46,13 +46,6 @@ I used gulp and bower for my dependencies and devDependencies :
 ```
 <div class="slider">
 
-   <ul class="slider-indicator-wrap">
-     <li class="slider-indicator active"></li>
-     <li class="slider-indicator"></li>
-     <li class="slider-indicator"></li>
-     <li class="slider-indicator"></li>
-   </ul>
-
    <div class="slider-control-wrap">
     <button type="button" class="slider-control slider-prev gv-no-btn"><span class="fa fa-chevron-left"></span></button>
     <button type="button" class="slider-control slider-next gv-no-btn"><span class="fa fa-chevron-right"></span></button>
