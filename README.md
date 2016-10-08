@@ -15,8 +15,12 @@ Ok, now we have this element `h1` and i want to shape its style quickly.<br>
 - <b>gv-color-main</b>: color property will take the value of `$main-color` or whatever value.
 - <b>gv-color-black</b>: background-color property will take the value of `$black-color` or `black` keyword.
 
-#### 
-# Used kit
+####`button`
+- <b>gv-padding-rl</b>: padding right and left.
+- <b>gv-radius</b>: border-radius.
+- <b>gv-shadow-box</b>: box shadow.
+
+# Used kits
 I used gulp and bower for my dependencies and devDependencies :
 
 ### Dependencies //Bower
@@ -37,3 +41,85 @@ I used gulp and bower for my dependencies and devDependencies :
 
 #### for quick use
 `<link href="css/style-en.css" rel="stylesheet">`
+
+#Slider structure
+```
+<div class="slider">
+
+   <ul class="slider-indicator-wrap">
+     <li class="slider-indicator active"></li>
+     <li class="slider-indicator"></li>
+     <li class="slider-indicator"></li>
+     <li class="slider-indicator"></li>
+   </ul>
+
+   <div class="slider-control-wrap">
+    <button type="button" class="slider-control slider-prev gv-no-btn"><span class="fa fa-chevron-left"></span></button>
+    <button type="button" class="slider-control slider-next gv-no-btn"><span class="fa fa-chevron-right"></span></button>
+   </div>
+
+   <div class="slider-inner">
+    <div class="slider-slide"></div>
+    <div class="slider-slide"></div>
+    <div class="slider-slide"></div>
+    <div class="slider-slide"></div>
+   </div>
+
+</div>
+
+```
+
+#Dropdown
+```
+ <li class="header-dropdown">
+  <a href="" class="header-dropdown-btn gv-color-third gv-no-underline">Home <span class="fa fa-caret-down"></span></a>
+  <ul class="header-dropdown-menu">
+    <li><a href="">drop1</a></li>
+    <li><a href="">drop2</a></li>
+    <li><a href="">drop3</a></li>
+  </ul>
+</li>
+
+</div>
+
+```
+#Burger example
+```
+// logo
+
+<div class="header-head">
+   <button class="header-burger gv-float-right gv-transition">
+     <span></span>
+     <span></span>
+     <span></span>
+   </button>
+ </div>
+
+ <div class="header-collapse">
+   <ul class="header-nav-wrap  gv-no-bullet ">
+    <li class="header-dropdown">
+      <a href="" class="header-dropdown-btn gv-color-third gv-no-underline">Home <span class="fa fa-caret-down"></span></a>
+      <ul class="header-dropdown-menu">
+        <li><a href="http://google.com">drop1</a></li>
+        <li><a href="">drop2</a></li>
+        <li><a href="">drop3</a></li>
+      </ul>
+    </li>
+
+    <li class="header-dropdown">
+      <a href="" class="header-dropdown-btn gv-color-third gv-no-underline">Home <span class="fa fa-caret-down"></span></a>
+      <ul class="header-dropdown-menu">
+        <li><a href="">drop1</a></li>
+        <li><a href="">drop2</a></li>
+        <li><a href="">drop3</a></li>
+      </ul>
+    </li>
+
+    <li><a href="" class="gv-color-third">Home</a></li>
+    <li><a href="" class="gv-color-third">Home</a></li>
+    <li><a href="" class="gv-color-third">Home</a></li>
+    <li><a href="" class="gv-color-third">Home</a></li>
+   </ul>
+  </div>         
+
+```
