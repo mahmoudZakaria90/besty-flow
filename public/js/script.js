@@ -43,12 +43,15 @@ var gv = {
 		//ingradients
 		var sliderNext = document.getElementsByClassName('slider-next');
 		var sliderPrev = document.getElementsByClassName('slider-prev');
-		var sliderIndicators = document.getElementsByClassName('slider-indicator-wrap');
+		var sliderAuto = document.querySelectorAll('[slider-auto]');
 		
 		var sliderNextWrap = [];
 		var sliderPrevWrap = [];
 		var sliderIndexWrap = [];
-		var sliderIndicatorsWrap = [];
+		var sliderAutoWrap = [];
+		
+
+		
 	
 		
 		//instructions
@@ -65,12 +68,29 @@ var gv = {
 			sliderIndexWrap.push(0);
 		}
 
-		//Indicators
-		for(var i = 0; i < sliderIndicators.length; i++){
-			sliderIndicatorsWrap.push(sliderIndicators[i]);
-			sliderIndexWrap.push(0);
-			
+		//Slider Auto
+		for(var i = 0; i < sliderAuto.length; i++){
+			sliderAutoWrap.push(sliderAuto[i]);
 		}
+
+		
+		sliderAutoWrap.forEach(function(item,index,array){
+			var parent = item.children[1];
+			var slides = parent.children;
+
+			if(item){
+				var timer = setInterval(function(){
+					if(sliderIndexWrap[index] === slides.length - 1){
+						sliderIndexWrap[index] = 0
+						parent.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
+					}else{
+						sliderIndexWrap[index] ++
+						parent.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
+					}
+				},1000)
+			}
+
+		})
 
 		sliderNextWrap.forEach(function(item,index,array){
 			var parent = item.parentNode;
@@ -109,16 +129,7 @@ var gv = {
 			
 		})
 
-		sliderIndicatorsWrap.forEach(function(item,index,array){
-				var childs = item.children
-				var sibling = item.nextElementSibling
-				childs.forEach(function(item){
-					item.addEventListener('click',function(){
-					alert('test')
-				})
-			})
-				
-		})
+		
 	},
 
 	dropdown: function(type){

@@ -42,11 +42,14 @@ var gv = {
 		//ingradients
 		var sliderNext = document.getElementsByClassName('slider-next');
 		var sliderPrev = document.getElementsByClassName('slider-prev');
-	
+		var sliderAuto = document.querySelectorAll('[slider-auto]');
 		
 		var sliderNextWrap = [];
 		var sliderPrevWrap = [];
 		var sliderIndexWrap = [];
+		var sliderAutoWrap = [];
+		
+
 		
 	
 		
@@ -64,7 +67,29 @@ var gv = {
 			sliderIndexWrap.push(0);
 		}
 
+		//Slider Auto
+		for(var i = 0; i < sliderAuto.length; i++){
+			sliderAutoWrap.push(sliderAuto[i]);
+		}
+
 		
+		sliderAutoWrap.forEach(function(item,index,array){
+			var parent = item.children[1];
+			var slides = parent.children;
+
+			if(item){
+				var timer = setInterval(function(){
+					if(sliderIndexWrap[index] === slides.length - 1){
+						sliderIndexWrap[index] = 0
+						parent.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
+					}else{
+						sliderIndexWrap[index] ++
+						parent.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
+					}
+				},1000)
+			}
+
+		})
 
 		sliderNextWrap.forEach(function(item,index,array){
 			var parent = item.parentNode;
