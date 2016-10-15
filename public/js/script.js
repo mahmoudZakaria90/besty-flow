@@ -49,6 +49,8 @@ var gv = {
 		var sliderPrevWrap = [];
 		var sliderIndexWrap = [];
 		var sliderAutoWrap = [];
+
+		var interval = 3000;
 		
 
 		
@@ -87,7 +89,7 @@ var gv = {
 						sliderIndexWrap[index] ++
 						parent.style.left = '-' + (sliderIndexWrap[index] * 100) + '%';
 					}
-				},1000)
+				},interval)
 			}
 
 		})
