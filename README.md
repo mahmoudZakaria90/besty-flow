@@ -44,7 +44,7 @@ I used gulp and bower for my dependencies and devDependencies :
 
 <h1 id="sliders">Slider structure</h1>
 ```
-<div class="slider">
+<div class="slider" slider-auto //optional>
 
    <div class="slider-control-wrap">
     <button type="button" class="slider-control slider-prev gv-no-btn"><span class="fa fa-chevron-left"></span></button>
