@@ -7,7 +7,7 @@ var jshint = require('gulp-jshint');
 var notificator = require('gulp-jshint-notify-reporter');
 
 
-//sass
+//sass-en
 gulp.task('sass', function () {
    sass('./src/sass/en/*.sass',{style:'expanded'})
     .on('error', sass.logError)
@@ -15,6 +15,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
+//sass-ar
 gulp.task('sass-ar', function () {   
    sass('./src/sass/ar/*.sass',{style:'expanded'})
     .on('error', sass.logError)
@@ -32,14 +33,14 @@ gulp.task('watch',function(){
 })
 
 
-//html
+//html live reload
 gulp.task('html', function() {
 	gulp.src('./public/**/*.html')
 		.pipe(connect.reload());
 
 })
 
-//js
+//Browserify
 gulp.task('browserify', function() {
     return browserify('./src/js/script.js')
         .bundle()
@@ -50,13 +51,14 @@ gulp.task('browserify', function() {
         .pipe(connect.reload());
 });
 
+//Js lint
 gulp.task('lint', function() {
   return gulp.src('./src/js/*.js')
     .pipe(jshint())
     .pipe(notificator())
 });
 
-//connect 
+//Localhost 
 gulp.task('server',function(){
 	connect.server({
 		root: 'public',
