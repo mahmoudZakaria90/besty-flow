@@ -156,7 +156,6 @@ input, button {
 .slider {
   position: relative;
   overflow: hidden;
-  direction: ltr;
 }
 .slider-inner {
   display: flex;
@@ -194,8 +193,8 @@ input, button {
   color: white !important;
 }
 .slider-next {
-  left: auto;
   right: 0;
+  left: auto;
 }
 .slider-indicator {
   width: 10px;
@@ -224,7 +223,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  background: #fff;
+  background-color: #fff;
   border-radius: 0.4rem;
   padding: 0.3em 1.5em;
   cursor: pointer;

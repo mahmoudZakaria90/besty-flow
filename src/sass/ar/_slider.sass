@@ -2,7 +2,6 @@
 .slider
 	position: relative
 	overflow: hidden
-	direction: ltr
 	&-inner
 		display: flex
 		position: relative
@@ -23,7 +22,6 @@
 			background-color: black
 
 	&-control
-
 		position: absolute
 		left: 0
 		width: 8%
@@ -33,11 +31,12 @@
 		align-items: center
 		z-index: 10
 		color: white!important
-		
-	&-next
-		left: auto
-		right: 0
 
+	&-next
+		right: 0
+		left: auto
+
+	
 	&-indicator
 		&-wrap
 			+gvPosition(absolute, auto 0 1rem 0)
