@@ -81,6 +81,7 @@ input[type="number"] {
   padding: 0.6rem 1.5rem;
   border: 0.1rem solid #ddd;
   border-radius: 0.5rem;
+  display: inline-block;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
@@ -222,24 +223,27 @@ input, button {
 button,
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
-  background-color: #fff;
+input[type="button"], .gv-btn {
+  background-color: #97783c;
   border-radius: 0.4rem;
-  padding: 0.3em 1.5em;
+  padding: 0.6rem 4rem;
   cursor: pointer;
   position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #1a1a1a;
 }
 button:active,
 input[type="submit"]:active,
 input[type="reset"]:active,
-input[type="button"]:active {
+input[type="button"]:active, .gv-btn:active {
   box-shadow: none;
-  top: 1px;
+  top: 0px;
 }
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover {
+input[type="button"]:hover, .gv-btn:hover {
   background-color: #1a1a1a;
   color: #fff;
 }
@@ -819,6 +823,12 @@ input[type="button"]:hover {
 }
 .gv-no-underline {
   text-decoration: none;
+}
+.gv-no-radius {
+  border-radius: 0;
+}
+.gv-no-shadow {
+  box-shadow: none;
 }
 .gv-no-btn {
   background-color: transparent;

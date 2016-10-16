@@ -335,6 +335,10 @@
 			float: none
 		&-underline
 			text-decoration: none
+		&-radius
+			border-radius: 0
+		&-shadow
+			box-shadow: none
 		&-btn
 			background-color: transparent
 			border-radius: 0
@@ -376,7 +380,11 @@
 			box-shadow: 0px 2px 2px $border-color-default
 		&-text
 			text-shadow: 0px 2px 2px $border-color-default
-
+	
+	//btn
+	&-btn
+		@extend %btn
+		
 	//FLEX
 	&-flex
 		display: flex
