@@ -82,6 +82,8 @@ input[type="number"] {
   border: 0.1rem solid #ddd;
   border-radius: 0.5rem;
   display: inline-block;
+  -webkit-transition: all 450ms;
+  transition: all 450ms;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
