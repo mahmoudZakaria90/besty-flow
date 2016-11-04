@@ -9,7 +9,7 @@ var csso = require('gulp-csso');
 
 //sass-en
 gulp.task('sass', function () {
-   sass('./src/sass/en/*.sass',{style:'expanded'})
+   sass('./src/sass/en/*.sass',{style:'compressed'})
     .on('error', sass.logError)
     .pipe(connect.reload())
     .pipe(gulp.dest('./public/css'));
@@ -17,7 +17,7 @@ gulp.task('sass', function () {
 
 //sass-ar
 gulp.task('sass-ar', function () {   
-   sass('./src/sass/ar/*.sass',{style:'expanded'})
+   sass('./src/sass/ar/*.sass',{style:'compressed'})
     .on('error', sass.logError)
     .pipe(connect.reload())
     .pipe(gulp.dest('./public/css'));
