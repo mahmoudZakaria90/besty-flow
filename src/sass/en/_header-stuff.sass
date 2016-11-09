@@ -2,6 +2,7 @@
 	&-collapse
 		height: 0
 		+gvTransitionD()
+		overflow: hidden
 	&-burger
 		padding: 0 1.5rem
 		background-color: transparent
@@ -38,8 +39,12 @@
 	&-dropdown
 		position: relative
 		&.active
-			.header-dropdown-menu
+			&>.header-dropdown-menu
 				display: block
+		&-hover
+			&:hover
+				.header-dropdown-menu
+					display: block
 
 		&-menu
 			display: none

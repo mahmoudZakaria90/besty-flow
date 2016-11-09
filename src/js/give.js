@@ -141,7 +141,7 @@ var gv = {
 			triggerWrap.push(trigger[i]);
 		}
 		triggerWrap.forEach(function(item){
-			item.children[0].addEventListener(type,function(e){
+			item.addEventListener(type,function(e){
 				e.preventDefault();
 				if(item.className == "header-dropdown"){
 					item.classList.add('active');
