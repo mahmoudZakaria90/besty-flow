@@ -64,8 +64,9 @@ h1,h2,h3,h4,h5,h6
 	font-family: $heading-face
 	font-weight: inherit
 	line-height: inherit
+	color: $heading-color
 
-button,
+
 input[type="submit"],
 input[type="reset"],
 input[type="button"]
@@ -75,7 +76,8 @@ input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="search"],
-input[type="number"]
+input[type="number"],
+select,textarea
 	padding: .6rem $reg
 	border: .1rem solid $border-color-default
 	border-radius: $border-radius-reg
@@ -106,11 +108,14 @@ table
 label
 	font-weight: normal
 
-
+textarea
+	resize: none
+	height: 10rem
 
 input,button
 	border: none
 	color: inherit
+	background-color: transparent
 
 
 ::-webkit-input-placeholder
