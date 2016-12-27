@@ -45,38 +45,7 @@
 /*Tablet portrait to infinite*/
 
 @media (min-width: 768px)
-	.header
-		&-burger
-			display: none
-		&-head
-			height: 0
-		&-collapse
-			height: auto!important
-			overflow: visible
-
-		&-nav
-			&-wrap
-				&>li
-					float: $dir
-		&-dropdown
-			&-menu
-				background-color: $main-color
-				min-width: 160px
-				border-radius: 4px
-				box-shadow: 0 1px 5px darken($main-color,.5)
-				position: absolute
-				#{$dir}: 0
-				padding: .5rem
-				z-index: 10
-				& .header-dropdown-menu
-					right: -100%
-					top: 0
-					left: auto
-				& > li
-					& > a
-						&:hover
-							background-color: $third-color
-							color: $main-color
+		
 	
 		
 

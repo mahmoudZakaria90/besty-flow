@@ -9,9 +9,11 @@
 	display: inline-block
 	text-decoration: none
 	color: $main-color
+	//box-shadow
 	&:active
 		box-shadow: none
-		top: 0px
+		-webkit-transform: translateY(1px)
+		transform: translateY(1px)
 
 	&:hover
 		background-color: $main-color

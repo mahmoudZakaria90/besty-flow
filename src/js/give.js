@@ -225,20 +225,22 @@ var gv = {
 			triggerWrap.push(trigger[i]);
 		}
 		triggerWrap.forEach(function(item){
+			console.log(item)
+			item.children[0].addEventListener(type, function(e){
+				e.preventDefault()
+			})
 			item.addEventListener(type,function(e){
-				e.preventDefault();
+				
 				if(item.className == "header-dropdown"){
 					item.classList.add('active');
 				}else if (item.className == "header-dropdown active"){
 					item.classList.remove('active');
 				}
 				item.parentNode.parentNode.style.height = 'auto';// for responsive
-			},false)
-
-			
-				document.body.addEventListener(type,function(){
-						item.classList.remove('active');
-				},true)
+			})
+			document.body.addEventListener(type,function(){
+					item.classList.remove('active');
+			},true)
 			
 		})
 	},

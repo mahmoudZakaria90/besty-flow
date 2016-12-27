@@ -29,7 +29,6 @@ gulp.task('watch',function(){
  	gulp.watch('./src/sass/ar/*.sass',['sass-ar'])
 	gulp.watch('./public/**/*.html',['html'])
 	gulp.watch('./src/js/script.js',['browserify'])
-    gulp.watch('./src/js/**.js',['lint'])
 })
 
 
