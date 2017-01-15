@@ -475,10 +475,15 @@
 	&-flex
 		display: flex
 		&-grow
-			flex-grow: 1
-			flex-shrink: 0
+			&>*
+				flex-grow: 1
+				flex-shrink: 0
+		&-auto
+			&>*
+				flex-basis: auto
 			
 		&-row
+			flex-direction: row
 			&-reverse
 				flex-direction: row-reverse
 		&-column
@@ -497,6 +502,13 @@
 				justify-content: center
 			&-v
 				align-items: center
+		&-start
+			align-items: flex-start
+			justify-content: flex-start
+			&-h
+				justify-content: flex-start
+			&-v
+				align-items: flex-start
 		&-end
 			align-items: flex-end
 			justify-content: flex-end
