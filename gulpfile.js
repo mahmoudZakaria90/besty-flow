@@ -12,9 +12,9 @@ var csso = require('gulp-csso');
 gulp.task('sass', function () {
    sass(['./src/sass/en/*.sass','./src/sass/ar/*.sass'],{style:'compressed'})
     .on('error', sass.logError)
-    .pipe(connect.reload())
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css'))
+    .pipe(connect.reload())
 });
 
 

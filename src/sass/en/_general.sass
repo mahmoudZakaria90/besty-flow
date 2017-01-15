@@ -57,31 +57,22 @@ h3
 h4
 	font-size: $h4
 
-h1,h2,h3,h4,h5,h6,p
-	margin:  0 0 $reg 0
-
-h1,h2,h3,h4,h5,h6
-	font-family: $heading-face
-	font-weight: inherit
-	line-height: inherit
-	color: $heading-color
+p
+	margin-bottom: $reg-rem
+	
 
 
-input[type="submit"],
-input[type="reset"],
-input[type="button"]
+[type="submit"],
+[type="reset"],
+[type="button"]
 	@extend %btn
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="search"],
-input[type="number"],
-select,textarea
-	padding: .6rem $reg
-	border: .1rem solid $border-color-default
-	border-radius: $border-radius-reg
+input, select, textarea
 	display: inline-block
+	padding: .6em $reg
+	border: .1rem solid $border-color-default
+	background-color: transparent
+	border-radius: $border-radius-reg
 	+gvTransitionD()
 	&:focus
 		border-color: $second-color
@@ -90,36 +81,44 @@ table
 	border-spacing: 0
 	border-collapse: collapse
 	&,tr,td
-		border: 1px solid $border-color-default
+		border: .1rem solid $border-color-default
 		
 
 @for $i from 1 through 6
 	h#{$i}
+		font-family: $heading-face
+		font-weight: inherit
+		line-height: inherit
+		color: $heading-color
+		margin-bottom:  $reg-rem
 		a
 			color: inherit
 			font-size: inherit
 
+	
 //font-awesome icons
 .fa
-	margin-#{$dir}: $reg
+	margin-#{$dir}: $reg-rem
 	text-decoration: none
-	font-size: 2.5rem
+	font-size: 1em
+	vertical-align: middle
 
 label
 	font-weight: normal
+	margin-bottom: .5rem
 
 textarea
 	resize: none
 	height: 10rem
 
-input,button
+button
 	border: none
 	color: inherit
 	background-color: transparent
 
 
 ::-webkit-input-placeholder
-	color: #aaa
+	color: $placeholder-color
 
 ::-moz-placeholder
-	color: #aaa
+	color: $placeholder-color
