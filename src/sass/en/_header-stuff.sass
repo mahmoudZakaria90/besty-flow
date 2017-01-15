@@ -92,5 +92,9 @@
 	&-breadcrumb
 		&>li
 			display: inline-block
+			& + li
+				&:before
+					content: '/'
+					margin-#{$dir-opp}: 1rem
 			&>a
 				display: block
