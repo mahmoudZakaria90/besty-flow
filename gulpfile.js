@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
+var autoprefixer = require('gulp-autoprefixer')
 var connect = require('gulp-connect');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
@@ -12,6 +13,7 @@ gulp.task('sass', function () {
    sass(['./src/sass/en/*.sass','./src/sass/ar/*.sass'],{style:'compressed'})
     .on('error', sass.logError)
     .pipe(connect.reload())
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./public/css'));
 });
 
