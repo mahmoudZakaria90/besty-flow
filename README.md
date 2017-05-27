@@ -80,6 +80,7 @@ I used gulp and bower for my dependencies and devDependencies :
 
 ```
 <h1 id="burger">Burger example</h1>
+
 ```
 
 <div class="header-head">
