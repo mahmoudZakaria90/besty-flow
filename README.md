@@ -9,13 +9,13 @@ Ok, now we have this element `h1` and i want to shape its style quickly.<br>
 `<button class="primary-btn gv-padding-rl gv-radius gv-shadow-box">click</button>`
 
 #### This will result
-####`h1`
+#### h1
 - <b>gv-padding</b>: padding all sides.
 - <b>gv-margin-lg</b>: margin large all sides.
 - <b>gv-color-main</b>: color property will take the value of `$main-color` or whatever value.
 - <b>gv-color-black</b>: background-color property will take the value of `$black-color` or `black` keyword.
 
-####`button`
+#### button
 - <b>gv-padding-rl</b>: padding right and left.
 - <b>gv-radius</b>: border-radius.
 - <b>gv-shadow-box</b>: box shadow.
@@ -43,6 +43,7 @@ I used gulp and bower for my dependencies and devDependencies :
 `<link href="css/style-en.css" rel="stylesheet">`
 
 <h1 id="sliders">Slider structure</h1>
+
 ```
 <div class="slider" slider-auto //optional>
 
@@ -61,9 +62,10 @@ I used gulp and bower for my dependencies and devDependencies :
 </div>
 
 ```
-#### Note: this version is under maintenance but work properly.
+
 
 <h1 id="dropdowns">Dropdown</h1>
+
 ```
  <li class="header-dropdown">
   <a href="" class="header-dropdown-btn gv-color-third gv-no-underline">Home <span class="fa fa-caret-down"></span></a>
@@ -117,4 +119,3 @@ I used gulp and bower for my dependencies and devDependencies :
   </div>         
 
 ```
-#### Note: this version is under maintenance but work properly.
