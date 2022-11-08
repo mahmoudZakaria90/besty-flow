@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/mahmoudZakaria90/besty-flow#readme",
   "devDependencies": {
-    "browserify": "^13.1.0",
+    "browserify": "^13.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-browserify": "^0.5.1",
